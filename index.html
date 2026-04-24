@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPP Transport Dashboard</title>
+<style>
+  :root {
+    --bg: #f5f4f0;
+    --surface: #ffffff;
+    --surface2: #f0ede6;
+    --border: rgba(0,0,0,0.1);
+    --border2: rgba(0,0,0,0.18);
+    --text: #1a1a18;
+    --text2: #5f5e5a;
+    --text3: #888780;
+    --green-bg: #eaf3de;
+    --green-text: #27500a;
+    --green-border: #639922;
+    --amber-bg: #faeeda;
+    --amber-text: #633806;
+    --amber-border: #ba7517;
+    --blue-bg: #e6f1fb;
+    --blue-text: #0c447c;
+    --blue-border: #378add;
+    --red-bg: #fcebeb;
+    --red-text: #791f1f;
+    --red-border: #e24b4a;
+    --gray-bg: #f1efe8;
+    --gray-text: #444441;
+    --gray-border: #888780;
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1e1d1b;
+      --surface: #2a2927;
+      --surface2: #323129;
+      --border: rgba(255,255,255,0.1);
+      --border2: rgba(255,255,255,0.18);
+      --text: #e8e6e0;
+      --text2: #b4b2a9;
+      --text3: #888780;
+      --green-bg: #173404; --green-text: #c0dd97; --green-border: #3b6d11;
+      --amber-bg: #412402; --amber-text: #fac775; --amber-border: #854f0b;
+      --blue-bg: #042c53; --blue-text: #b5d4f4; --blue-border: #185fa5;
+      --red-bg: #501313; --red-text: #f7c1c1; --red-border: #a32d2d;
+      --gray-bg: #2c2c2a; --gray-text: #d3d1c7; --gray-border: #5f5e5a;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 0;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-mark {
+    width: 36px; height: 36px;
+    background: var(--text);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-mark svg { width: 20px; height: 20px; }
+  .logo-text { font-size: 15px; font-weight: 600; letter-spacing: -0.2px; }
+  .logo-sub { font-size: 12px; color: var(--text3); margin-top: 1px; }
+  .spp-logo img { height: 36px; width: auto; }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+  .last-updated {
+    font-size: 12px; color: var(--text3);
+    font-family: 'DM Mono', monospace;
+  }
+  .refresh-btn {
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 7px;
+    transition: opacity 0.15s;
+    font-family: inherit;
+  }
+  .refresh-btn:hover { opacity: 0.8; }
+  .refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .refresh-btn svg { width: 14px; height: 14px; }
+  .spinning { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  main { padding: 24px 28px; max-width: 1300px; }
+
+  .summary-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+  .stat-label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+  .stat-value { font-size: 26px; font-weight: 600; line-height: 1; font-family: 'DM Mono', monospace; }
+  .stat-value.green { color: var(--green-border); }
+  .stat-value.amber { color: var(--amber-border); }
+  .stat-value.red { color: var(--red-border); }
+  .stat-value.blue { color: var(--blue-border); }
+
+  .carrier-section { margin-bottom: 20px; }
+  .carrier-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 10px;
+  }
+  .carrier-name { font-size: 14px; font-weight: 600; }
+  .carrier-detail { font-size: 12px; color: var(--text3); }
+  .carrier-badge {
+    font-size: 11px; font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid;
+  }
+  .badge-pallex { background: var(--blue-bg); color: var(--blue-text); border-color: var(--blue-border); }
+  .badge-longs { background: var(--amber-bg); color: var(--amber-text); border-color: var(--amber-border); }
+  .badge-clear { background: var(--green-bg); color: var(--green-text); border-color: var(--green-border); }
+
+  .consignment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .consignment-table thead tr {
+    background: var(--surface2);
+    border-top: 1px solid var(--border2);
+    border-bottom: 1px solid var(--border2);
+  }
+  .consignment-table th {
+    padding: 9px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .consignment-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .consignment-table tr:last-child td { border-bottom: none; }
+  .consignment-table tr:hover td { background: var(--surface2); }
+
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .status-pill .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .s-depot { background: var(--blue-bg); color: var(--blue-text); border-color: var(--blue-border); }
+  .s-depot .dot { background: var(--blue-border); }
+  .s-acknowledged { background: var(--gray-bg); color: var(--gray-text); border-color: var(--gray-border); }
+  .s-acknowledged .dot { background: var(--gray-border); }
+  .s-new { background: var(--amber-bg); color: var(--amber-text); border-color: var(--amber-border); }
+  .s-new .dot { background: var(--amber-border); }
+  .s-delivered { background: var(--green-bg); color: var(--green-text); border-color: var(--green-border); }
+  .s-delivered .dot { background: var(--green-border); }
+  .s-exception { background: var(--red-bg); color: var(--red-text); border-color: var(--red-border); }
+  .s-exception .dot { background: var(--red-border); }
+  .s-pending { background: var(--gray-bg); color: var(--gray-text); border-color: var(--gray-border); }
+  .s-pending .dot { background: var(--gray-border); }
+
+  .due-today {
+    font-size: 10px; font-weight: 600;
+    background: var(--red-bg); color: var(--red-text);
+    border: 1px solid var(--red-border);
+    padding: 2px 7px; border-radius: 20px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .ref { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text3); }
+  .customer-name { font-weight: 500; }
+  .postcode { font-size: 12px; color: var(--text3); font-family: 'DM Mono', monospace; }
+
+  .empty-row td {
+    padding: 20px 14px;
+    color: var(--text3);
+    font-size: 13px;
+  }
+
+  .loading-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 100;
+    display: none;
+  }
+  .loading-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 28px 36px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  .loading-card p { color: var(--text2); font-size: 14px; margin-top: 10px; }
+  .spinner-lg {
+    width: 32px; height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--text);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto;
+  }
+
+  .error-bar {
+    background: var(--red-bg);
+    color: var(--red-text);
+    border: 1px solid var(--red-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    display: none;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 8px 0 20px;
+  }
+
+  footer {
+    padding: 20px 28px;
+    font-size: 11px;
+    color: var(--text3);
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-card">
+    <div class="spinner-lg"></div>
+    <p>Fetching live data from portals...</p>
+  </div>
+</div>
+
+<header>
+  <div class="logo">
+    <div class="spp-logo" id="logo-img-wrap">
+      <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAA8ATMDASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAABgcABQEECAMC/8QAVBAAAQMDAgMDBgcKCgYLAAAAAQIDBAUGEQAHEiExE0FRCBQiYXGBFRYXkZOU0TJCUlVWdKGy0uEYIydUYnWCkrGzJTU2Q1dyJigzNDc4RFNzovD/xAAZAQACAwEAAAAAAAAAAAAAAAACAwABBAX/xAA0EQABBAAEAwUFCAMAAAAAAAABAAIDEQQSITEUQVEFE2FxkSIyU4GhFRYjQ1JU8PGxwdH/2gAMAwEAAhEDEQA/AOy9TOpoN3WvNyzaAZMOlyanUHyURo7LSlgnHNSikHCR+noNUSALKXLI2Jpc7YIyyPHWOJPiNcU168d265JXIlO3EyCcpajRnWm0+oBIH6cnVYKruf8A+/dX91/Wbim9CuG7t9oOkZXdPEnxGpxJ8Rrhf4V3P/nF1/3X9T4V3P8A5xdf91/U4odCq+8Dfhld0BQJwDrOucvJdm3fJvOpJuF2tLjin5QJocCeLtE9OPlnGddGaex+dthdfCYniYxIG15rJIAzrHEnx0nNz65clwbmRNtbbqZozaovnM+akfxnCefCnny5Y9pPXlz+X9l6rFYEih7jXGxUEjIXId421H1gYIHvPv1Wc9Et2LeXOEbCa0TmyNY4h46GduGrtYtlDV5yIsipocUkORxgKbH3JV3FR5nIA7uWk7DoFdvjde9Ke3etZo7FNko7JEdwqThQPLGRjHD+nUc+gNN0U2KMeSm2Xcl0QCD36zpKS9qL6pTCptv7oVV6Y2CpDUsegvHceZA94I0U7J3tMu+3ZKKu0lms0yQYs5CU8IKh0UB3ZweXiDqw/WiFI8US/u5G5SUwsjUzrmzbu2q/f1Wud56+67TRAqrrCG2HipJTxqx1PLHTRj8jNY/4o3P/AH/36oPJFgJcWMklbmbHp5hOHiGcZ56zkaH7HoD9tUBFMk1mXVloWpZkyjlZyensGlZVLmu/c+6ptvWLUPgagwF9lNqoGVuq7wjHd1wARnqTjRF1J0mJ7pozD2jsBunjxpyQFAkazkYzpNO7ISUMdtD3DuVuojmHnHsoKv8AlGDj36I9qGdxIL9QpN7LjzY0bHmdQSr03h4EAc8DvPPu56oOdzCGPESFwa9hF89wmFkeOs5Gk7aVUqbvlLXRTHZ0hcFmGlTTCnCUIJS1zCeg6n59OIdNW11hNgnEzSQNiR6LHEnx1AQRkaQm+9VuK5LuVaVnTX2naNBcnzVMuKSVL4cpbyO/GMD+lpobTXQ3d1iU2scYL6m+zkpH3rqeSvt9+q7wE0lRYxskzogNufXr6IsJxqZGq65lrbtyouNqKFpiulKgeYIQcHQP5Nk+bU9p4EuoS35chTzwU68sqUcOEDmdXm1pNdOBMIq3BPomTrBIHfrOlT5UFRn0vbhuTTZkiI/582ntGXCg4IVkZGrcaFop5RDGZDsE1cjU4h46Hrhrgt6xJNdeQXvNIXbcPF90oJGAT6zpTWXZVy7j0Nm7LrvasRUzwXY0OnuBtDTZPo5znw6Yz4nOhL9aCTLii1wYxtki0+sjx1kkAaUdt2TuFaV0wRS7xXWLfddxLYqIJcbR3lJ7zywCMesEa3PKZqE+mbXuyqdMfiSBMYAcZWUKwVcxkamegSRsocUWROke0ikz8jx1CoDqdJeBs/WJUCPJO51zILzSXCAvpkZx11YUraKqwqlFmL3JuOQlh1LhacUOFwAg8J59DqBzjyQjETH8v6hNjI8dTiHiNJ7yoZ9Tg25Qk02oyYC5FTS0tyO4UKKShXLljOvNOzVwcIWjdS4geoyOX62qLzdAKn4t/eGNjLqr1HNOXiGs50iJda3F2nmsu3PO+NNquOBtcsIw/HJ6E9/uOQfEHTupsyNUIDE6I4l2O+2lxpaeikqGQdE14JpNgxIlJbVEbgrZ1NTU0S0rBONLeVvftrHlOxnq8rtGlqbWEw3lDIODghGD066YcxDrkZ1DKwhxSCEKIyASOR1zP/BorJUSq54JUeZJYXzPz6XIXj3Qudj5cVHl4dt9U0Pl12x/Hzn1F/8AY1Pl12x/Hzn1F/8AY0rv4M1Y/KaD9Av7dZHkzVj8poP0C/t0rPN+kLm8R2r8Mfz5po/Lptj+Pl/UX/2NT5dNsPx859Rf/Y0r/wCDNWPymg/QK+3U/gzVj8poP0Cvt1M836VO/wC1Phj+fNO2ytxrQvGovQLdqS5chlrtXEmM43hOQM5UkDqRovxy0oNktpJ231wzanKq8aamRF7AIbbUkg8QVnmfVpv9x05hcR7S7ODdM6IGcU5KndXb+4Jl2Rb5sioMxq7Ga7JbL/Jt9A7s9xwcYPI8uYxqlG7N9WyEi+NvJjcdB4XJUI8Q9ven/wCw0VV7dekW5fa7buOHLpkdSEqjVB1GWnj34x0A6Z5+vGrmqX9YzFIdmP3RRXYvDkpTKQsrHgEgknPhjQEAk0aWNzI8znxSZTzHK/Iqys256NdtDbq9EliRHX6KhjCm1d6VDuOkzZ1325aO824DlxVRqAiTJaDJWlR4yArOMA9Mj59XHkvxHhGuiuR4q41HqdQ46e2oYBQkqyoDw5gf2fVrW21pFLq+9O4qKrTIswNyGSjt2gvhzxZxnp0GhJJykpMsskwge2g4n5bFEVd30sCFAccp1SXV5hGGYsVlZU4ruGSAAM//AI68vJ5oFWp1Gq9frkcxZ9emmWY5GC2jnjPrOSfZjR9T7at+A8HoVEp0Zz8NqOlJ+cDVoocuWm5CTZK3sw0jpBJM662A8VzJtVc930KsXc1bdmu3A27WHlOuId4OyUFqAHr8dHvyi7qf8JJP1ofZqg2Cui3KDUb0ardcp1NW7WnVNplSEtlQClcxxHnpq/KRt/8AlpQPr7f26Wz3d1zsE38EfjVvpp1X1dNQqPyXT6k7FVCqCqUt1bGcllwtElOfUeXu0LeS7EjMbQU2QyB2sp1519XepfaKTz9gSBo7hz6JdFGfNOnxalAeCmVuR3UuIORgjIyM89JOwq+7s5cUuyrtDrdCkyFSKZUOAqbCT1Bx3dCfA57jnRO0cCdlrmcI8QyVx9mqv+dV0H69Zxz0LSdw7Gj0/wA9cuyjdhw8QKZiFE+wA5J9WNV23O4rF81SpopVJmppcTCWag4OFD6s4KQDzBHX/HGjzDZa+JiLgwO1KC7L/wDNTd35kj9RrTZuysxrftufWZigGYjKnFZOMkDkPecD36U1mH/rUXby/wDQo/Ua167+S5N0XJQtsKa4tHn7wk1BbfVtlOSM/MVe5PjpTTTPVc+CYxYd7hvmIHmTorDydKJKTQZ141dPFU7ikKlLKuqWsnhHvyT7CNVe363LC3srFmOns6RXB5/TuL7lLnPiSPaAR/ZGtlrYOjoZDSLtulKUgBIEtIAGP+XQzuTtL8T6ELxoFcrM6pUl1t8JlvJWA2lWVYwAR9mdDTgBpskvZPExju7os1u/X1T3uk/9Gan+Zu/qHQB5LR/kdp3/AM7/APmK0TR6/EubbFddhHLUymrXjPNKuzPEk+sHI92lx5Ol7WlRNrYNPq9yUuDLQ88VsvyEoWkFZIyD6tMPvBa3ys4qN5Ohaf8ASeek95Wh/kwa/rBr/BWjRO5m36lBIvGhkqOAPPEcz8+gnyslJVtaypJBSag0QR3jhVq5CCwo8fIx+Fkym9Ex6hSo1ds9dHmcXYS4YaWUnBAKRzHr0n6RB3f2wj/BVLpsW7KAyomOEK4XW0k9OHPEPYOIaa9wVl+3rGVWI1MkVN2NGQoRmBla+Qz7h1Oqa0N2bGuKGh1FciQJJA7SNMdS0tCu8czhXtGq00JKCVsLnNt+V4Gh/tVNj7y0usVtu37gpM23Ks4QlpqWk8DivAKIBBz4ge3Xj5V3LaV78+j/AK2hbygazQrwn0C2rWkRqrX/AIQQpLsRQWGEjrxLT8/XljOifyqxw7RO/nsf9fQ2aIWaSV7oJmOOYAbrQpm4O6LdOjNNbUSHW0NJShfnQHEABg9NEtkXjflXuFqDXdv3qNBWhRXKU/xhJAyBjHeeWrCjbh2G1SIaHLwoSFpYQFJM5sEHhHLrrej7hWLJfbjx7vobrrighCETmypSicAAZ5nRjzWmFtUTNfhol95Vv+oba/rlH6itOdsfxafZpLeVi4hu3bbWtaUpTWEEqJ5AcCuejobm7foaBVeNFGB087Rn5s6oEBxtSKRjMVLmNe7/AIW/uVCiz7BrkWYlKmVwnc5HTCSQfcRnQn5MEl+Ts5Su3JPYuvtNk96Euqx9nu0L7i7jLv1tyxduGnqi9NwibPDZS1HaJ9I5Pj0yfdk6bNiW9GtW0qbQIh4m4bIQVnqtXVSveok+/VghzrHJXE8TYsvZsBRPjavdTU1NMXSWpWH1xaZLkN442mFrTnpkJJGuVm9/r9KQc0vmP5r+/XV8pDbjK0PBKm1JKVhXQg9c+rQamztscA/AdtfRtaw4yGaQju35V0uz8RBDm76PNe3gkF8v1+/hUv6r+/U+X6/fwqX9V/fp+/E7bL8RW19G1qfE7bL8RW19G1rDwmL+Kujx+A/b/RIP5fr+/Cpf1X9+p8v1/fhUv6t+/T8+J22X4itr6NrUNnbYjrQra+ja1fB4s/mqcfgP2/0CEfJ+3Aui+KrVE1kxPNYjCCnsWeA8aiepz4JOnJqqoFv0KhtuCh0uFAbeIUvzZoIC8dCcddWpGddTDsfGzK82VxMXLHLKXRtyjoqG40WnVmF06vGkykA+kzJWglJ9hOQdDsLaPbUPomx7chOZ9JJ4lKQfdnB1VWlTrRm1m63bgg0WRIFadSlUxttSwjgRyHFzxzOt7a0U5m77li205xW632JbS0sqjokkHtEtHpjHDkDkDpbJS5wsDVDP2dC6yRZGuo8kekQqbCGfN4kVlISM4QhtPd6gNadKoFGp9TmVanwmWZdQ4VSX285ex0J5+vQxuG03ctxUuyVcTkRxJnVNKT/uEnCEnH4S/wBCTrb2rlyG6RJtue8p2bQnvNFLWfScaxlpZ9qMe8HTO9Bflr+1HYUd2H8+nQbItL7CX0sKebDqk8QQVDiI8ceGsvvMstdo86htAI9JSgB8+lTuZSqpVN0qSqiTTDqsKkvSoivvFrS6n0F/0VAkH269rxuVm5No5kpLRjTGJDLEyKv7qO6l1AUk/wCIPeMaA4iswrb6p7cGSGEG738NVd1LbbbntHqhULfpiC4srdddPCCpRyTknHMnWl8RNogP9WUD6dP7Wvvf1TKNtFqkJCmRNh9okp4gU9ujIx38u7VNDqmy8uWzFZt6Ap15aW0A0BwAqJwOZbwPfqnS0/Lpy3WePsuF0feFl6nYDlX/AFMWh0mg2zTExKVGjU+GpzKUJVhJUrwyep1sVyi0muQFQavT402Or7x5sKAPiM9D6xoR3nSGrVpyEJSlIrEEAAYAHbJ5DR6DyGnB1uLeiW6BojGmh5IAZ2c25alecC2oylZyEqUop+YnGjiBCiQIjcSFGZjR2k8KGmkBKUj1AchrYGpo2gDYJMcEcfuNAVM3QaDArcu5Ewo7FQfbxIlk4KkgDqScYwkfNrSiRLPFzOV2Mulqq8hHZLfS+lTik8vR6+odNY3X5bZ3L/Vcj/LOhFFH2xTYUZ+pxLfjnzBtTr7YbQ8lXADkKT6XFnw550mSUtdlFdVsiw0b2hzuvIJoOutMsqeddQ22gZUtSgAB4k6r5FRoM9hyG9UKe+2+ktra7dB4wRgjGe/QBKcqbvk1THKt2qpiqI9ku/8AaFOFcBV/SKeHPr18IGzgtZozhanGYqO17Psu14uEZxw+lxZ8OedCZzdDpeqYMK0g3Z1rQWj+iW/RaNRlUemwWo8FfFlhGeE8XX59CU3bvainlKJtEosUr6B5zhJ+dWs2BOqtH2cFRqyJRdhx5DzCZOe1LCSotBeefFwBPXnrU27sajVWgMXJdMRmt1irNiQ+9LHahAWMpbQDySkAgctTvi6so1q9UngIQ0mSqBoaKzi7YbbupQ/HtqmLSeaVoyQfWDnV5dUC16pBbpNxCA5HBDiGJDoT05AgZHr0GUKELG3Xi21SlLTQa3EdfZiKWVJivN4KuDPRJHd46zcdFpVe3wjQ6zT489hNBUsNvI4khXbYzj36ozGttbpFHgIQ4gaNIvbomTDdhvx0+ZvMutJASC2sKAx3ZGhS5tu7BrEvzir0Gn+cvr4Q4P4pTij3ciOI/p0M3xbkHb/zW8LTQumBmS01PhMqPYSWVqCTlGcBQJyCMauN2lf6Tsc9xuJj9RerM1Ahw1FfVU/BRykc2m9x0V7a9lWnaYW9RaPDgqKTxvBPp8PrUeeOWt+u0ii3NSRDqkZioQXFJcCScoURzBBGvi9CPifWfzB//LVoNp9afoHk+0+rxkpMhiisdlkcgsoSAT7zo3yBhIPIWgiwbXx5WjcgVy1XtN2/2mhPBmZR6JHdV0Q66Ek+4q1uxtt9u4i26gzbtNaLJDqHgThJHMKznGvm19urajUdPwrTY1YqElAclzJyA846tQyTlWcDwA6au7ftSj0WjP0WK047TnlrUY8hwuoQlXVCQron1ajC+9QEDsHhGn2RqPALVuaPZNyRWotddpM9hlfaIQ7IThKsEZ6+BOquJtjtnJbD8W26W83nAU2eJOR7DjVFcFnWm1urbUFu26UiM/DlrdZEVHA4UhPCVDGDjno8qFGEC0J9KtaLHpjyozoipYQG0IdUk4Vgchzxz0LHPeTmA0TJsHhiGkDU9QPJSii1aIr4JpRpMFYP/d2VIQon1pHMnV6DnSNt1W2jdBiW1eFv/AtXS2luQ9UIykLce71pkgcyTkhXFp109DDMNliOoqZQgJbJUVZSBy5nr7dXDJn10RzYdsIDWg+mnyWxqamprQkLTrbTj9ImsNJ4nHI60pHiSk4GuPUbPbhlCc225nA/3rf267O1NY8VgmYkguOy6GB7SkwWbIAb6rjP5HdwvycX9Kj7dQ7O7hY/2cX9Kj7ddmamsn2ND1K6H3ixP6QuMhs5uGT/ALOL+lR9umRtZsK/GqTVWvBUdSGSFNQGzxhShzBWemPUM510LqabF2XDG7NqfNIn7dxMzMug8lhCQlISkAADAA1k9DqamukuMl1bFiU2RWLjnXDb8OQ5Jqq3Yzj7SVlTXAgDHqyDy0dwokaBETGhRmo7DY9BppASkewDW1qaVHE1goJ0s75T7RS1t2xl1edVLjuY1GJUp8pQQ1HmLa7KOj0WkHgODyBV/a16x7UmWvuBT6tQBMl0+e0qJVUvyVOqRgcTTuVnJAOUn1K0xdTQDDsFVuj4p+vTakIy6XPc3VgVhMc+ZNUl1hbuRgLU4kgePQHQ1u3YtRnvqrFsApkyVtNVOKCAmU2lYKV8+QWnHXvBOmnqat+Ha9pB5qR4p8bmubyFIK3fplSqtjGJSoa5cpEqK92KFAFQQ8hSsEnHQHXj8cLmz/4b1v6yx+1o71NQwnNmDqQtnAZlc29+vNBG68Cq1S0IvwbTXZUtqdFkqjJUkKwhYUoZJxnlr6i3bcbklllzb6stIWtKVOKkMEIBOCo4Vnl10a6mrMJLswKjZgGBjm3XmsJzjnrOpqackKg3FgyqlYldp8JovSpMB5plAOCpSkEAfPqstCxrcgUemOv23TW6i1Ga7VZjpKg4EjPPHXPfoy1NLMTS/MU5s72syNNC7Q5uXTplU29rtMp7PbSpMB1plsEDiUUkAc9U1ZsSLUrNhxosaPTazEaadjSW2khTT6EjGSBzBPI+3R5qaF0LXXfSlceIfGAGnnaHqD8IVy0RHuOmGDKeZUxLYCgUk4KVKSR96eo9ug23375seL8XnrZfuSnRfRp8yG+hLnZfeocSrHMdMjTTwPDU1DDYGuoVtnoEEaHWkvrPodeqd3uXrdcVqFIRHMWnQEOdp5s2TlSlqHIrOB06DWtdrVxUzdBi46XbUqsxfgkxVBl5DZSsuFX33q0ysDw1NUYBly342rbiSH5q5VXgljKp14X1UobVdpLdAt+K+mQ7GXIDsiWtByhJ4eSUA89EO5tvTq7QoyqQtpuqU2W1Ohdp9wpxs/cK8AQSM6LdTUEIogm7QnEOzAtFAbBLSt1i9rhob1BiWfJpcuYgx35cp9ssMJUMKUnhJUvkTgYGimRakF6wvigpSvNBCTEC/vgEpACvbyB0RYGpq2wjUuN2o6c6ZBVG/mlxR63fNBgik1i0pNZfjp7NmdT30dnISOQKgsgoVjGeuiq0HrikU9b9xxYkOQ46pTceOsr7JvuSpXRSvEjlq91MDVsjLa9pVJKHisoBPNB9dpNQk7nW9VmWCqFFiSm3ncjCFLCeEe/B0R1oVFVJlCkGOJ/ZHzcyAS2F93FjnjW7qaJrAL8UBeSGg8ks63Vrtq1vyaJO27dXOfaU0VmQ0uHxEY4+IniCe/GM6NLMpb1FtWl0mQ9270OK2ytzP3RSkAnVxqYGhbFldmvVMfNmZkAobqampqaakL//2Q==" alt="Specialised Panel Products" style="height:40px;width:auto;">
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="last-updated" id="lastUpdated">Not yet loaded</span>
+    <button class="refresh-btn" id="filterBtn" onclick="toggleFilter()" style="background:var(--surface);color:var(--text);border:1px solid var(--border2);margin-right:8px;">
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 2h12M3 7h8M5 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <span id="filterLabel">Active only</span>
+    </button>
+    <button class="refresh-btn" id="refreshBtn" onclick="refreshData()">
+      <svg id="refreshIcon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 7A5 5 0 1 1 7 2a5 5 0 0 1 3.5 1.5L9 5h4V1l-1.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Refresh
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="error-bar" id="errorBar"></div>
+
+  <div class="summary-bar" id="summaryBar">
+    <div class="stat"><div class="stat-label">Total active</div><div class="stat-value" id="statTotal">—</div></div>
+    <div class="stat"><div class="stat-label">At depot</div><div class="stat-value blue" id="statDepot">—</div></div>
+    <div class="stat"><div class="stat-label">Acknowledged</div><div class="stat-value" id="statAck">—</div></div>
+    <div class="stat"><div class="stat-label">Due today</div><div class="stat-value amber" id="statToday">—</div></div>
+    <div class="stat"><div class="stat-label">Exceptions</div><div class="stat-value red" id="statExceptions">—</div></div>
+  </div>
+
+  <div id="dashboardContent">
+    <p style="color: var(--text3); font-size: 14px; padding: 40px 0; text-align: center;">
+      Press <strong>Refresh</strong> to load live data from Pall-Ex and Longs of Leeds.
+    </p>
+  </div>
+</main>
+
+<footer>
+  <span>Specialised Panel Products Ltd &nbsp;·&nbsp; Internal use only</span>
+  <span>Sources: Pall-Ex NexusCOS (SPP + TWA) &nbsp;·&nbsp; Longs of Leeds portal</span>
+</footer>
+
+<script>
+const DATA_FILE = 'spp_transport_data.json';
+
+function statusClass(status) {
+  const s = (status || '').toLowerCase();
+  if (s.includes('depot') || s.includes('delivery depot')) return 's-depot';
+  if (s.includes('acknowledged')) return 's-acknowledged';
+  if (s.includes('new')) return 's-new';
+  if (s.includes('delivered')) return 's-delivered';
+  if (s.includes('exception')) return 's-exception';
+  if (s.includes('pending')) return 's-pending';
+  return 's-acknowledged';
+}
+
+function statusLabel(status) {
+  const s = (status || '').trim();
+  if (!s || s === '—') return 'Unknown';
+  return s;
+}
+
+function parseDate(dateStr) {
+  if (!dateStr || dateStr === '—') return null;
+  // Handle DD/MM/YYYY HH:MM format from Pall-Ex
+  const dmyMatch = dateStr.match(/^(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2}):(\d{2}))?/);
+  if (dmyMatch) {
+    const [, dd, mm, yyyy, hh = '00', min = '00'] = dmyMatch;
+    return new Date(+yyyy, +mm - 1, +dd, +hh, +min);
+  }
+  // Handle day names from Longs (Tuesday, Wednesday etc) — not a real date
+  const dayNames = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+  if (dayNames.includes(dateStr.toLowerCase())) return null;
+  // Fallback: try native parse
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+function isToday(dateStr) {
+  const d = parseDate(dateStr);
+  if (!d) return false;
+  const today = new Date();
+  return d.getDate() === today.getDate() &&
+         d.getMonth() === today.getMonth() &&
+         d.getFullYear() === today.getFullYear();
+}
+
+function formatDue(dateStr) {
+  if (!dateStr || dateStr === '—') return '—';
+  // Day names and text values from Longs — display as-is
+  const dayNames = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday','delivered'];
+  if (dayNames.includes(dateStr.toLowerCase().trim())) {
+    return dateStr.charAt(0).toUpperCase() + dateStr.slice(1).toLowerCase();
+  }
+  const d = parseDate(dateStr);
+  if (!d) return dateStr;
+  return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) +
+         ' ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+}
+
+function renderTable(consignments, cols) {
+  if (!consignments || consignments.length === 0) {
+    return `<table class="consignment-table"><tbody><tr class="empty-row"><td colspan="${cols.length}" style="color:var(--text3);padding:20px 14px;">No active consignments</td></tr></tbody></table>`;
+  }
+  const thead = `<thead><tr>${cols.map(c => `<th>${c.label}</th>`).join('')}</tr></thead>`;
+  const rows = consignments.map(c => {
+    const dueToday = isToday(c.due_date);
+    return `<tr>
+      <td class="ref">${c.consignment_ref || '—'}</td>
+      <td class="ref">${c.order_ref || '—'}</td>
+      <td><span class="customer-name">${c.customer || '—'}</span>${dueToday ? '<span class="due-today">TODAY</span>' : ''}</td>
+      <td class="postcode">${c.postcode || '—'}</td>
+      <td>${c.service || '—'}</td>
+
+      <td>${formatDue(c.due_date)}</td>
+      ${c.eta !== undefined ? `<td style="font-weight:${c.eta ? '600' : 'normal'};color:${c.eta ? 'var(--amber-border)' : 'var(--text3)'}">${c.eta || '—'}</td>` : ''}
+      <td><span class="status-pill ${statusClass(c.status)}"><span class="dot"></span>${statusLabel(c.status)}</span></td>
+    </tr>`;
+  }).join('');
+  return `<table class="consignment-table">${thead}<tbody>${rows}</tbody></table>`;
+}
+
+function renderDashboard(data) {
+  window._lastData = data;
+  let totalActive = 0, atDepot = 0, acknowledged = 0, dueToday = 0, exceptions = 0;
+
+  // Build filtered + sorted carriers
+  const filteredCarriers = (data.carriers || []).map(carrier => {
+    let cons = (carrier.consignments || []).slice();
+
+    // Filter delivered/refused if active only
+    if (showActiveOnly) {
+      cons = cons.filter(c => {
+        const s = (c.status || '').toLowerCase();
+        return !s.includes('delivered') && !s.includes('refused');
+      });
+    }
+
+    // Sort by due date, latest first (text day names go to end)
+    cons.sort((a, b) => {
+      const da = parseDate(a.due_date), db = parseDate(b.due_date);
+      if (!da && !db) return 0;
+      if (!da) return 1;
+      if (!db) return -1;
+      return db - da;
+    });
+
+    return Object.assign({}, carrier, { consignments: cons });
+  });
+
+  // Stats from filtered data
+  filteredCarriers.forEach(carrier => {
+    (carrier.consignments || []).forEach(c => {
+      totalActive++;
+      const s = (c.status || '').toLowerCase();
+      if (s.includes('depot')) atDepot++;
+      if (s.includes('acknowledged')) acknowledged++;
+      if (s.includes('exception') || s.includes('refused')) exceptions++;
+      if (isToday(c.due_date)) dueToday++;
+    });
+  });
+
+  document.getElementById('statTotal').textContent = totalActive;
+  document.getElementById('statDepot').textContent = atDepot;
+  document.getElementById('statAck').textContent = acknowledged;
+  document.getElementById('statToday').textContent = dueToday;
+  document.getElementById('statExceptions').textContent = exceptions;
+
+  // Longs of Leeds columns
+  const colsLongs = [
+    { label: 'Consignment' },
+    { label: 'Order ref' },
+    { label: 'Customer' },
+    { label: 'Postcode' },
+    { label: 'Service' },
+    { label: 'Due' },
+    { label: 'Status' },
+  ];
+
+  // Pall-Ex columns
+  const colsPallex = [
+    { label: 'Consignment' },
+    { label: 'Order ref' },
+    { label: 'Customer' },
+    { label: 'Postcode' },
+    { label: 'Service' },
+    { label: 'Due' },
+    { label: 'ETA' },
+    { label: 'Status' },
+  ];
+
+  let html = '';
+
+  filteredCarriers.forEach(carrier => {
+    const badgeClass = carrier.name.toLowerCase().includes('longs') ? 'badge-longs' : 'badge-pallex';
+    const hasCons = carrier.consignments && carrier.consignments.length > 0;
+    const clearBadge = !hasCons ? `<span class="carrier-badge badge-clear">All clear</span>` : '';
+    html += `
+      <div class="carrier-section">
+        <div class="carrier-header">
+          <span class="carrier-badge ${badgeClass}">${carrier.type || 'Carrier'}</span>
+          <span class="carrier-name">${carrier.name || 'Unknown'}</span>
+          <span class="carrier-detail">${carrier.account || ''} ${carrier.phone ? '· ' + carrier.phone : ''} ${carrier.origin ? '· ' + carrier.origin : ''}</span>
+          ${clearBadge}
+        </div>
+        ${hasCons
+          ? renderTable(carrier.consignments, carrier.name.toLowerCase().includes('longs') ? colsLongs : colsPallex)
+          : `<div style="font-size:13px;color:var(--text3);padding:10px 0 4px;">No active consignments${carrier.last_delivery ? ' — last delivery: ' + carrier.last_delivery : ''}.</div>`
+        }
+      </div>
+      <hr class="section-divider">`;
+  });
+
+  document.getElementById('dashboardContent').innerHTML = html;
+  const now = new Date();
+  document.getElementById('lastUpdated').textContent = 'Updated ' + now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+}
+
+// Filter state
+let showActiveOnly = true;
+let sortByDue = false;
+
+function toggleFilter() {
+  showActiveOnly = !showActiveOnly;
+  document.getElementById('filterLabel').textContent = showActiveOnly ? 'Active only' : 'Show all';
+  document.getElementById('filterBtn').style.background = showActiveOnly ? 'var(--blue-bg)' : 'var(--surface)';
+  document.getElementById('filterBtn').style.color = showActiveOnly ? 'var(--blue-text)' : 'var(--text)';
+  if (window._lastData) renderDashboard(window._lastData);
+}
+
+function parseDate(dateStr) {
+  if (!dateStr || dateStr === '—') return null;
+  const dmyMatch = dateStr.match(/^(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2}):(\d{2}))?/);
+  if (dmyMatch) {
+    const [, dd, mm, yyyy, hh = '00', min = '00'] = dmyMatch;
+    return new Date(+yyyy, +mm - 1, +dd, +hh, +min);
+  }
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+async function refreshData() {
+  const btn = document.getElementById('refreshBtn');
+  const icon = document.getElementById('refreshIcon');
+  const overlay = document.getElementById('loadingOverlay');
+  const errorBar = document.getElementById('errorBar');
+
+  btn.disabled = true;
+  icon.classList.add('spinning');
+  overlay.style.display = 'flex';
+  errorBar.style.display = 'none';
+
+  try {
+    const res = await fetch(DATA_FILE + '?t=' + Date.now());
+    if (!res.ok) throw new Error('Data file not found. Has the fetch script been run?');
+    const data = await res.json();
+    renderDashboard(data);
+  } catch (err) {
+    errorBar.textContent = 'Could not load data: ' + err.message;
+    errorBar.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    icon.classList.remove('spinning');
+    overlay.style.display = 'none';
+  }
+}
+
+window.addEventListener('load', refreshData);
+</script>
+</body>
+</html>
