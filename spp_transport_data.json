@@ -1,0 +1,29 @@
+{
+  "generated": "pending",
+  "carriers": [
+    {
+      "type": "Pall-Ex",
+      "name": "Pall-Ex -- SPP (Austin Wilkinson & Sons Ltd)",
+      "account": "Account: SPP",
+      "phone": "01942 887000",
+      "origin": "Landmark Joinery",
+      "consignments": []
+    },
+    {
+      "type": "Pall-Ex",
+      "name": "Pall-Ex -- TWA Warehousing & Distribution Ltd",
+      "account": "Account: SPEC01",
+      "phone": "0845 262 9995",
+      "origin": "Booker Timber",
+      "consignments": []
+    },
+    {
+      "type": "Longs of Leeds",
+      "name": "Longs of Leeds (Specialised Panel Products)",
+      "account": "LS25 6EZ",
+      "phone": "0113 264 0106",
+      "origin": "Triesse / Latham's",
+      "consignments": []
+    }
+  ]
+}
