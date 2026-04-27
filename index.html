@@ -342,6 +342,12 @@ window.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
   <div class="header-right">
+    <input type="text" id="searchBox" placeholder="Search customer..." oninput="applySearch()"
+      style="padding:8px 14px;border:1px solid rgba(255,255,255,0.4);border-radius:6px;
+             font-size:13px;background:rgba(255,255,255,0.15);color:white;
+             outline:none;width:200px;font-family:inherit;"
+      onfocus="this.style.background='rgba(255,255,255,0.25)'"
+      onblur="this.style.background='rgba(255,255,255,0.15)'">
     <span class="last-updated" id="lastUpdated">Not yet loaded</span>
     <button class="refresh-btn" id="filterBtn" onclick="toggleFilter()" style="background:var(--surface);color:var(--text);border:1px solid var(--border2);margin-right:8px;">
       <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 2h12M3 7h8M5 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -475,6 +481,16 @@ function renderDashboard(data) {
       });
     }
 
+    // Apply customer search filter
+    if (searchTerm) {
+      cons = cons.filter(c => {
+        return (c.customer || '').toLowerCase().includes(searchTerm) ||
+               (c.order_ref || '').toLowerCase().includes(searchTerm) ||
+               (c.consignment_ref || '').toLowerCase().includes(searchTerm) ||
+               (c.postcode || '').toLowerCase().includes(searchTerm);
+      });
+    }
+
     // Sort by due date, latest first (text day names go to end)
     cons.sort((a, b) => {
       const da = parseDate(a.due_date), db = parseDate(b.due_date);
@@ -566,6 +582,12 @@ function renderDashboard(data) {
 // Filter state
 let showActiveOnly = true;
 let sortByDue = false;
+let searchTerm = '';
+
+function applySearch() {
+  searchTerm = document.getElementById('searchBox').value.toLowerCase().trim();
+  if (window._lastData) renderDashboard(window._lastData);
+}
 
 function toggleFilter() {
   showActiveOnly = !showActiveOnly;
