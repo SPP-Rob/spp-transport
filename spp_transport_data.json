@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-01T12:01:35.740233",
+  "generated": "2026-05-01T15:57:29.188655",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -148,8 +148,8 @@
           "pallets": "1",
           "due_date": "05/05/2026 12:00",
           "eta": "",
-          "planned": "No",
-          "status": "New"
+          "planned": "Yes",
+          "status": "Out for collection"
         }
       ]
     },
@@ -174,7 +174,7 @@
           "order_ref": "10208",
           "customer": "Hutton Construction Ltd",
           "postcode": "IP17 1SP",
-          "due_date": "Thursday",
+          "due_date": "Wednesday",
           "service": "24",
           "pallets": "1OS2",
           "weight": "989kg"
@@ -236,11 +236,11 @@
         },
         {
           "consignment_ref": "1125075",
-          "status": "At Delivery Depot",
+          "status": "Delivered",
           "order_ref": "1117381RR",
           "customer": "Horizon Fisheries",
           "postcode": "IV21 2BQ",
-          "due_date": "Last Thursday",
+          "due_date": "Delivered",
           "service": "EC",
           "pallets": "1OS2",
           "weight": "535kg"
