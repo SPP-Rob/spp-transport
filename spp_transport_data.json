@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-01T08:51:29.550116",
+  "generated": "2026-05-01T10:32:04.400175",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -148,7 +148,7 @@
           "pallets": "1",
           "due_date": "05/05/2026 12:00",
           "eta": "",
-          "planned": "Yes",
+          "planned": "No",
           "status": "New"
         }
       ]
@@ -181,11 +181,11 @@
         },
         {
           "consignment_ref": "1147961",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10210",
           "customer": "University College London",
           "postcode": "E20 2AE",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 SV BD PU",
           "pallets": "1OS2",
           "weight": "46kg"
