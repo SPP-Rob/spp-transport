@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-05T12:01:19.094556",
+  "generated": "2026-05-05T15:57:08.756382",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -18,7 +18,7 @@
           "pallets": "1",
           "due_date": "05/05/2026 12:00",
           "eta": "",
-          "planned": "No",
+          "planned": "Yes",
           "status": "Delivery Depot"
         },
         {
@@ -123,7 +123,7 @@
           "due_date": "06/05/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Collection Scheduled"
+          "status": "Out for collection"
         },
         {
           "consignment_ref": "10145A",
@@ -136,7 +136,7 @@
           "due_date": "06/05/2026 12:00",
           "eta": "",
           "planned": "Yes",
-          "status": "New"
+          "status": "Collection Depot"
         },
         {
           "consignment_ref": "10190A",
@@ -148,8 +148,8 @@
           "pallets": "1",
           "due_date": "06/05/2026 12:00",
           "eta": "",
-          "planned": "No",
-          "status": "New"
+          "planned": "Yes",
+          "status": "Collection Depot"
         }
       ]
     },
@@ -170,7 +170,7 @@
       "consignments": [
         {
           "consignment_ref": "1154013",
-          "status": "Acknowledged",
+          "status": "At Collection Depot",
           "order_ref": "10148/3501",
           "customer": "Van Board Ltd.",
           "postcode": "CH5 1QJ",
@@ -181,7 +181,7 @@
         },
         {
           "consignment_ref": "1148717",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10208",
           "customer": "Hutton Construction Ltd",
           "postcode": "IP17 1SP",
