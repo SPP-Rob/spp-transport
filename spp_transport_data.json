@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-06T12:01:20.118313",
+  "generated": "2026-05-06T15:57:10.198395",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -19,7 +19,20 @@
           "due_date": "06/05/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Out for collection"
+          "status": "Collection Depot"
+        },
+        {
+          "consignment_ref": "10145A",
+          "order_ref": "10145A",
+          "customer": "Event Concept",
+          "town": "LONDON",
+          "postcode": "SE16 3PB",
+          "service": "Premium AM",
+          "pallets": "5",
+          "due_date": "06/05/2026 12:00",
+          "eta": "13:55 - 15:05",
+          "planned": "No",
+          "status": "Delivered"
         },
         {
           "consignment_ref": "10190A",
@@ -33,19 +46,6 @@
           "eta": "07:59 - 09:59",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10145A",
-          "order_ref": "10145A",
-          "customer": "Event Concept",
-          "town": "LONDON",
-          "postcode": "SE16 3PB",
-          "service": "Premium AM",
-          "pallets": "5",
-          "due_date": "06/05/2026 12:00",
-          "eta": "",
-          "planned": "Yes",
-          "status": "Loaded to C&D"
         },
         {
           "consignment_ref": "10190",
@@ -149,7 +149,7 @@
           "due_date": "07/05/2026 12:00",
           "eta": "",
           "planned": "Yes",
-          "status": "New"
+          "status": "Collection Depot"
         }
       ]
     },
@@ -170,7 +170,7 @@
       "consignments": [
         {
           "consignment_ref": "1156036",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "9857",
           "customer": "Graham Smith",
           "postcode": "E10 7FB",
@@ -192,11 +192,11 @@
         },
         {
           "consignment_ref": "1148717",
-          "status": "At Hub",
+          "status": "To Delivery Depot",
           "order_ref": "10208",
           "customer": "Hutton Construction Ltd",
           "postcode": "IP17 1SP",
-          "due_date": "Today",
+          "due_date": "Thursday",
           "service": "24",
           "pallets": "1OS2",
           "weight": "989kg"
