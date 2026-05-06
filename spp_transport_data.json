@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-06T10:31:48.178192",
+  "generated": "2026-05-06T12:01:20.118313",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -148,7 +148,7 @@
           "pallets": "5",
           "due_date": "07/05/2026 12:00",
           "eta": "",
-          "planned": "No",
+          "planned": "Yes",
           "status": "New"
         }
       ]
@@ -170,7 +170,7 @@
       "consignments": [
         {
           "consignment_ref": "1156036",
-          "status": "Acknowledged",
+          "status": "Collecting",
           "order_ref": "9857",
           "customer": "Graham Smith",
           "postcode": "E10 7FB",
