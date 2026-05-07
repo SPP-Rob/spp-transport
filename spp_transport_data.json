@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-07T10:31:47.459866",
+  "generated": "2026-05-07T12:01:17.598325",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -179,22 +179,22 @@
         },
         {
           "consignment_ref": "1154013",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10148/3501",
           "customer": "Van Board Ltd.",
           "postcode": "CH5 1QJ",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "EC AM PU",
           "pallets": "1OS2",
           "weight": "375kg"
         },
         {
           "consignment_ref": "1148717",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10208",
           "customer": "Hutton Construction Ltd",
           "postcode": "IP17 1SP",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24",
           "pallets": "1OS2",
           "weight": "989kg"
