@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-07T12:01:17.598325",
+  "generated": "2026-05-07T15:57:09.266768",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -17,9 +17,9 @@
           "service": "Premium AM",
           "pallets": "5",
           "due_date": "07/05/2026 12:00",
-          "eta": "",
-          "planned": "Yes",
-          "status": "Delivery Depot"
+          "eta": "12:24 - 13:40",
+          "planned": "No",
+          "status": "Delivered"
         },
         {
           "consignment_ref": "10190RTN",
@@ -157,7 +157,7 @@
       "consignments": [
         {
           "consignment_ref": "1160584",
-          "status": "Acknowledged",
+          "status": "At Collection Depot",
           "order_ref": "10044 / 3469",
           "customer": "University College London",
           "postcode": "W12 7RH",
