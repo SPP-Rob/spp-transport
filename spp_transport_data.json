@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-07T08:51:13.312984",
+  "generated": "2026-05-07T10:31:47.459866",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -156,12 +156,23 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1160584",
+          "status": "Acknowledged",
+          "order_ref": "10044 / 3469",
+          "customer": "University College London",
+          "postcode": "W12 7RH",
+          "due_date": "Friday",
+          "service": "24 SV BD PU",
+          "pallets": "1OS2",
+          "weight": "460kg"
+        },
+        {
           "consignment_ref": "1156036",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "9857",
           "customer": "Graham Smith",
           "postcode": "E10 7FB",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 AM SV",
           "pallets": "1OS2",
           "weight": "270kg"
@@ -179,7 +190,7 @@
         },
         {
           "consignment_ref": "1148717",
-          "status": "At Delivery Depot",
+          "status": "Out for Delivery",
           "order_ref": "10208",
           "customer": "Hutton Construction Ltd",
           "postcode": "IP17 1SP",
