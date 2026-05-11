@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-11T12:01:52.523527",
+  "generated": "2026-05-11T15:57:38.218679",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -123,7 +123,7 @@
           "due_date": "12/05/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "New"
+          "status": "Collection Depot"
         }
       ]
     },
@@ -172,6 +172,19 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10186",
+          "order_ref": "10186",
+          "customer": "L.A.C. CONVEYOR SYSTEMS LTD",
+          "town": "NOTTINGHAM",
+          "postcode": "NG6 8RE",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "13/05/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "New"
         }
       ]
     },
