@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-11T15:57:38.218679",
+  "generated": "2026-05-12T08:51:27.117227",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -8,6 +8,19 @@
       "phone": "01942 887000",
       "origin": "Landmark Joinery",
       "consignments": [
+        {
+          "consignment_ref": "10204",
+          "order_ref": "10204",
+          "customer": "Trovex",
+          "town": "DEREHAM",
+          "postcode": "NR19 1JG",
+          "service": "Premium",
+          "pallets": "2",
+          "due_date": "12/05/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Departed hub"
+        },
         {
           "consignment_ref": "10190RTN",
           "order_ref": "10190",
@@ -111,19 +124,6 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10204",
-          "order_ref": "10204",
-          "customer": "Trovex",
-          "town": "DEREHAM",
-          "postcode": "NR19 1JG",
-          "service": "Premium",
-          "pallets": "2",
-          "due_date": "12/05/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Collection Depot"
         }
       ]
     },
@@ -184,7 +184,7 @@
           "due_date": "13/05/2026 12:00",
           "eta": "",
           "planned": "No",
-          "status": "New"
+          "status": "Out for collection"
         }
       ]
     },
