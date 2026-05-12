@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-12T12:01:34.639378",
+  "generated": "2026-05-12T15:57:23.190035",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -19,7 +19,7 @@
           "due_date": "12/05/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Delivery Depot"
+          "status": "Arrived at Delivery Point"
         },
         {
           "consignment_ref": "10190RTN",
