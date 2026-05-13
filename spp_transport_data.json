@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-13T08:51:15.945110",
+  "generated": "2026-05-13T10:31:48.164720",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -25,9 +25,9 @@
           "service": "Premium AM",
           "pallets": "1",
           "due_date": "13/05/2026 12:00",
-          "eta": "",
+          "eta": "09:28 - 11:28",
           "planned": "No",
-          "status": "Out for delivery"
+          "status": "Delivered"
         },
         {
           "consignment_ref": "9997",
