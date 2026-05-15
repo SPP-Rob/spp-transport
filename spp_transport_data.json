@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-14T15:57:31.691169",
+  "generated": "2026-05-15T08:51:30.298167",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -56,32 +56,6 @@
           "service": "Premium AM",
           "pallets": "5",
           "due_date": "07/05/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10183",
-          "order_ref": "10183",
-          "customer": "Quarry Hall Farm",
-          "town": "BLETCHINGLEY",
-          "postcode": "RH1 4QZ",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "30/04/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
-          "consignment_ref": "9969",
-          "order_ref": "9969",
-          "customer": "GBS Ltd",
-          "town": "WINCHESTER",
-          "postcode": "SO22 5JS",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "30/04/2026 12:00",
           "eta": "",
           "planned": "No",
           "status": "Delivered"
@@ -144,11 +118,11 @@
       "consignments": [
         {
           "consignment_ref": "1172684",
-          "status": "At Collection Depot",
+          "status": "Out for Delivery",
           "order_ref": "10163",
           "customer": "Westmeston Carpentry",
           "postcode": "BN6 8SP",
-          "due_date": "Friday",
+          "due_date": "Today",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "925kg"
@@ -317,50 +291,6 @@
           "service": "EC",
           "pallets": "1OS2",
           "weight": "535kg"
-        },
-        {
-          "consignment_ref": "1111552",
-          "status": "Delivered",
-          "order_ref": "10037",
-          "customer": "Liza Salt",
-          "postcode": "GL19 3QS",
-          "due_date": "Delivered",
-          "service": "24 AM",
-          "pallets": "2F",
-          "weight": "1300kg"
-        },
-        {
-          "consignment_ref": "1111213",
-          "status": "Delivered",
-          "order_ref": "10043",
-          "customer": "University College London",
-          "postcode": "E20 2AE",
-          "due_date": "Delivered",
-          "service": "24 SV BD PU",
-          "pallets": "1OS2",
-          "weight": "912kg"
-        },
-        {
-          "consignment_ref": "1107718",
-          "status": "Delivered",
-          "order_ref": "10070",
-          "customer": "Objects For Art",
-          "postcode": "IP14 2EN",
-          "due_date": "Delivered",
-          "service": "24 AM",
-          "pallets": "1OS2",
-          "weight": "840kg"
-        },
-        {
-          "consignment_ref": "1105961",
-          "status": "Delivered",
-          "order_ref": "10084",
-          "customer": "Arch Construction",
-          "postcode": "EN1 3RB",
-          "due_date": "Delivered",
-          "service": "24 AM SV PU",
-          "pallets": "1OS2",
-          "weight": "192kg"
         }
       ]
     }
