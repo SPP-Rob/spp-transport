@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15T10:32:01.460770",
+  "generated": "2026-05-15T12:01:35.537379",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -96,7 +96,7 @@
           "pallets": "6",
           "due_date": "19/05/2026 17:00",
           "eta": "",
-          "planned": "Yes",
+          "planned": "No",
           "status": "New"
         }
       ]
@@ -118,11 +118,11 @@
       "consignments": [
         {
           "consignment_ref": "1172684",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10163",
           "customer": "Westmeston Carpentry",
           "postcode": "BN6 8SP",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "925kg"
