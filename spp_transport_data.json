@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-15T15:57:26.756839",
+  "generated": "2026-05-18T08:51:30.190941",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -118,7 +118,7 @@
       "consignments": [
         {
           "consignment_ref": "1178824",
-          "status": "Acknowledged",
+          "status": "Collecting",
           "order_ref": "10197",
           "customer": "Jenny Newton",
           "postcode": "WR14 2UA",
@@ -280,28 +280,6 @@
           "service": "EC AM SV PU RD",
           "pallets": "1OS2",
           "weight": "270kg"
-        },
-        {
-          "consignment_ref": "1117381",
-          "status": "Delivered",
-          "order_ref": "853",
-          "customer": "Landmark Joinery",
-          "postcode": "L24 9HX",
-          "due_date": "Delivered",
-          "service": "24",
-          "pallets": "1OS2",
-          "weight": "445kg"
-        },
-        {
-          "consignment_ref": "1114194",
-          "status": "Delivered",
-          "order_ref": "10088",
-          "customer": "Horizon Fisheries",
-          "postcode": "IV21 2BQ",
-          "due_date": "Delivered",
-          "service": "EC",
-          "pallets": "1OS2",
-          "weight": "535kg"
         }
       ]
     }
