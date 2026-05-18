@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-18T12:01:34.723866",
+  "generated": "2026-05-18T15:57:25.649383",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -97,7 +97,7 @@
           "due_date": "19/05/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "New"
+          "status": "Collection Depot"
         }
       ]
     },
@@ -117,8 +117,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1181576",
+          "status": "Acknowledged",
+          "order_ref": "3533",
+          "customer": "Dart Valley Railway",
+          "postcode": "TQ4 6AF",
+          "due_date": "Wednesday",
+          "service": "24 SV PU",
+          "pallets": "1OS2",
+          "weight": "260kg"
+        },
+        {
           "consignment_ref": "1178824",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "10197",
           "customer": "Jenny Newton",
           "postcode": "WR14 2UA",
