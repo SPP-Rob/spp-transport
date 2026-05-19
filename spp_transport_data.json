@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-18T15:57:25.649383",
+  "generated": "2026-05-19T08:51:15.469644",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -9,17 +9,17 @@
       "origin": "Landmark Joinery",
       "consignments": [
         {
-          "consignment_ref": "10190RTN",
-          "order_ref": "10190",
-          "customer": "Box Productions",
-          "town": "LIVERPOOL",
-          "postcode": "L24 9HX",
+          "consignment_ref": "10143",
+          "order_ref": "10143",
+          "customer": "LUCY ELECTRIC UK LTD",
+          "town": "THAME",
+          "postcode": "OX9 3UJ",
           "service": "Premium",
-          "pallets": "1",
-          "due_date": "06/05/2026 17:00",
+          "pallets": "6",
+          "due_date": "19/05/2026 17:00",
           "eta": "",
-          "planned": "Yes",
-          "status": "Collection Depot"
+          "planned": "No",
+          "status": "Loaded to C&D"
         },
         {
           "consignment_ref": "10204",
@@ -30,6 +30,19 @@
           "service": "Premium",
           "pallets": "2",
           "due_date": "12/05/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10190RTN",
+          "order_ref": "10190",
+          "customer": "Box Productions",
+          "town": "LIVERPOOL",
+          "postcode": "L24 9HX",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "06/05/2026 17:00",
           "eta": "",
           "planned": "No",
           "status": "Delivered"
@@ -85,19 +98,6 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10143",
-          "order_ref": "10143",
-          "customer": "LUCY ELECTRIC UK LTD",
-          "town": "THAME",
-          "postcode": "OX9 3UJ",
-          "service": "Premium",
-          "pallets": "6",
-          "due_date": "19/05/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Collection Depot"
         }
       ]
     },
@@ -117,6 +117,28 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1182456",
+          "status": "Acknowledged",
+          "order_ref": "10234",
+          "customer": "Great Western (Svr)",
+          "postcode": "DY12 1DP",
+          "due_date": "Wednesday",
+          "service": "24 SV",
+          "pallets": "1OS2",
+          "weight": "129kg"
+        },
+        {
+          "consignment_ref": "1182419",
+          "status": "Acknowledged",
+          "order_ref": "110302/10187",
+          "customer": "Taylor's Joinery",
+          "postcode": "EX7 0NH",
+          "due_date": "Wednesday",
+          "service": "24 AM",
+          "pallets": "1OS2",
+          "weight": "325kg"
+        },
+        {
           "consignment_ref": "1181576",
           "status": "Acknowledged",
           "order_ref": "3533",
@@ -129,11 +151,11 @@
         },
         {
           "consignment_ref": "1178824",
-          "status": "At Collection Depot",
+          "status": "To Delivery Depot",
           "order_ref": "10197",
           "customer": "Jenny Newton",
           "postcode": "WR14 2UA",
-          "due_date": "Tuesday",
+          "due_date": "Today",
           "service": "24 PM SV PU",
           "pallets": "1OS2",
           "weight": "260kg"
