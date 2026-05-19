@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-19T12:01:19.886202",
+  "generated": "2026-05-19T15:57:10.644746",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -117,8 +117,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1184571",
+          "status": "Acknowledged",
+          "order_ref": "10144",
+          "customer": "Spp",
+          "postcode": "SG14 1HD",
+          "due_date": "Thursday",
+          "service": "24 TL AM SV",
+          "pallets": "1M",
+          "weight": "92kg"
+        },
+        {
           "consignment_ref": "1182456",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "10234",
           "customer": "Great Western (Svr)",
           "postcode": "DY12 1DP",
@@ -129,7 +140,7 @@
         },
         {
           "consignment_ref": "1182419",
-          "status": "Collecting",
+          "status": "Collected",
           "order_ref": "110302/10187",
           "customer": "Taylor's Joinery",
           "postcode": "EX7 0NH",
@@ -140,7 +151,7 @@
         },
         {
           "consignment_ref": "1181576",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "3533",
           "customer": "Dart Valley Railway",
           "postcode": "TQ4 6AF",
@@ -151,11 +162,11 @@
         },
         {
           "consignment_ref": "1178824",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10197",
           "customer": "Jenny Newton",
           "postcode": "WR14 2UA",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 PM SV PU",
           "pallets": "1OS2",
           "weight": "260kg"
