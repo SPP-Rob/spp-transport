@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-20T12:01:38.185209",
+  "generated": "2026-05-20T15:57:24.115327",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -105,7 +105,7 @@
       "consignments": [
         {
           "consignment_ref": "1184571",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "10144",
           "customer": "Spp",
           "postcode": "SG14 1HD",
@@ -116,11 +116,11 @@
         },
         {
           "consignment_ref": "1182456",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10234",
           "customer": "Great Western (Svr)",
           "postcode": "DY12 1DP",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 SV",
           "pallets": "1OS2",
           "weight": "129kg"
@@ -138,11 +138,11 @@
         },
         {
           "consignment_ref": "1181576",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "3533",
           "customer": "Dart Valley Railway",
           "postcode": "TQ4 6AF",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 SV PU",
           "pallets": "1OS2",
           "weight": "260kg"
