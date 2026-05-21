@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-21T08:51:16.841892",
+  "generated": "2026-05-21T10:31:50.787622",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -37,11 +37,11 @@
         },
         {
           "consignment_ref": "1184571",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10144",
           "customer": "Spp",
           "postcode": "SG14 1HD",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 TL AM SV",
           "pallets": "1M",
           "weight": "92kg"
