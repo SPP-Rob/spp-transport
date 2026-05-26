@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-26T10:31:52.099446",
+  "generated": "2026-05-26T12:01:20.566977",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -25,8 +25,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
-          "consignment_ref": "1193228",
+          "consignment_ref": "1195695",
           "status": "Acknowledged",
+          "order_ref": "10285",
+          "customer": "Fred & Rosemary",
+          "postcode": "DD8 1UN",
+          "due_date": "Thursday",
+          "service": "24 SV PU",
+          "pallets": "1OS2",
+          "weight": "595kg"
+        },
+        {
+          "consignment_ref": "1193228",
+          "status": "Collected",
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
@@ -37,7 +48,7 @@
         },
         {
           "consignment_ref": "1192774",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10171",
           "customer": "Hutton And Read Ltd",
           "postcode": "EH27 8EA",
@@ -48,7 +59,7 @@
         },
         {
           "consignment_ref": "1191275",
-          "status": "Acknowledged",
+          "status": "Collecting",
           "order_ref": "10233",
           "customer": "Esl Fuels Ltd",
           "postcode": "PL9 9XH",
