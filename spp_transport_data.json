@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-21T15:57:11.988274",
+  "generated": "2026-05-26T10:31:52.099446",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -25,12 +25,45 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1193228",
+          "status": "Acknowledged",
+          "order_ref": "10229",
+          "customer": "Alloy Project Solutions Ltd.",
+          "postcode": "NW1 9PP",
+          "due_date": "Wednesday",
+          "service": "24 AM SV PU",
+          "pallets": "1OS2",
+          "weight": "940kg"
+        },
+        {
+          "consignment_ref": "1192774",
+          "status": "Acknowledged",
+          "order_ref": "10171",
+          "customer": "Hutton And Read Ltd",
+          "postcode": "EH27 8EA",
+          "due_date": "Wednesday",
+          "service": "24 AM SV PU",
+          "pallets": "1OS3",
+          "weight": "810kg"
+        },
+        {
+          "consignment_ref": "1191275",
+          "status": "Acknowledged",
+          "order_ref": "10233",
+          "customer": "Esl Fuels Ltd",
+          "postcode": "PL9 9XH",
+          "due_date": "Wednesday",
+          "service": "24",
+          "pallets": "1OS2",
+          "weight": "622kg"
+        },
+        {
           "consignment_ref": "1188210",
-          "status": "At Collection Depot",
+          "status": "At Delivery Depot",
           "order_ref": "10173",
           "customer": "Monotypic Ltd",
           "postcode": "TR26 2AN",
-          "due_date": "Friday",
+          "due_date": "Today",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "363kg"
@@ -86,7 +119,7 @@
           "customer": "Jenny Newton",
           "postcode": "WR14 2UA",
           "due_date": "Delivered",
-          "service": "24 PM SV PU",
+          "service": "24 PM SV PU RD",
           "pallets": "1OS2",
           "weight": "260kg"
         },
@@ -166,61 +199,6 @@
           "service": "24",
           "pallets": "1OS2",
           "weight": "190kg"
-        },
-        {
-          "consignment_ref": "1130103",
-          "status": "Delivered",
-          "order_ref": "10064 / SO-034813",
-          "customer": "Waterstones Booksellers Ltd",
-          "postcode": "WC1E 6EQ",
-          "due_date": "Delivered",
-          "service": "24 AM SV PU",
-          "pallets": "1OS2",
-          "weight": "330kg"
-        },
-        {
-          "consignment_ref": "1127453",
-          "status": "Delivered",
-          "order_ref": "10080",
-          "customer": "David Salisbury Joinery",
-          "postcode": "TA9 4PW",
-          "due_date": "Delivered",
-          "service": "48",
-          "pallets": "1OS2",
-          "weight": "110kg"
-        },
-        {
-          "consignment_ref": "1125479",
-          "status": "Delivered",
-          "order_ref": "1114194RR",
-          "customer": "Landmark Joinery",
-          "postcode": "L24 9HX",
-          "due_date": "Delivered",
-          "service": "EC",
-          "pallets": "1OS2",
-          "weight": "445kg"
-        },
-        {
-          "consignment_ref": "1125075",
-          "status": "Delivered",
-          "order_ref": "1117381RR",
-          "customer": "Horizon Fisheries",
-          "postcode": "IV21 2BQ",
-          "due_date": "Delivered",
-          "service": "EC",
-          "pallets": "1OS2",
-          "weight": "535kg"
-        },
-        {
-          "consignment_ref": "1122673",
-          "status": "Delivered",
-          "order_ref": "10117",
-          "customer": "Lozi Designs Ltd",
-          "postcode": "E2 7SJ",
-          "due_date": "Delivered",
-          "service": "DD AM SV PU",
-          "pallets": "1OS2",
-          "weight": "689kg"
         }
       ]
     }
