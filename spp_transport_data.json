@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-27T08:51:25.071398",
+  "generated": "2026-05-27T10:31:58.357683",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -19,7 +19,7 @@
           "due_date": "27/05/2026 12:00",
           "eta": "",
           "planned": "No",
-          "status": "Departed hub"
+          "status": "Delivery Depot"
         },
         {
           "consignment_ref": "10143",
@@ -104,7 +104,7 @@
         },
         {
           "consignment_ref": "1193228",
-          "status": "At Delivery Depot",
+          "status": "Out for Delivery",
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
@@ -115,7 +115,7 @@
         },
         {
           "consignment_ref": "1192774",
-          "status": "At Delivery Depot",
+          "status": "Out for Delivery",
           "order_ref": "10171",
           "customer": "Hutton And Read Ltd",
           "postcode": "EH27 8EA",
