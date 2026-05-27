@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-27T10:31:58.357683",
+  "generated": "2026-05-27T12:01:29.223532",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -17,9 +17,9 @@
           "service": "Premium AM",
           "pallets": "1",
           "due_date": "27/05/2026 12:00",
-          "eta": "",
+          "eta": "11:25 - 13:25",
           "planned": "No",
-          "status": "Delivery Depot"
+          "status": "Out for delivery"
         },
         {
           "consignment_ref": "10143",
@@ -93,7 +93,7 @@
       "consignments": [
         {
           "consignment_ref": "1195695",
-          "status": "Acknowledged",
+          "status": "Collecting",
           "order_ref": "10285",
           "customer": "Fred & Rosemary",
           "postcode": "DD8 1UN",
@@ -104,7 +104,7 @@
         },
         {
           "consignment_ref": "1193228",
-          "status": "Out for Delivery",
+          "status": "Arrived",
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
@@ -115,11 +115,11 @@
         },
         {
           "consignment_ref": "1192774",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10171",
           "customer": "Hutton And Read Ltd",
           "postcode": "EH27 8EA",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 AM SV PU",
           "pallets": "1OS3",
           "weight": "810kg"
