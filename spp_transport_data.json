@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-27T12:01:29.223532",
+  "generated": "2026-05-27T15:57:23.255660",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -19,7 +19,7 @@
           "due_date": "27/05/2026 12:00",
           "eta": "11:25 - 13:25",
           "planned": "No",
-          "status": "Out for delivery"
+          "status": "Delivered"
         },
         {
           "consignment_ref": "10143",
@@ -33,6 +33,19 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10301",
+          "order_ref": "10301",
+          "customer": "Johnston Joiners Ltd.",
+          "town": "PAISLEY",
+          "postcode": "PA3 4DY",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "01/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "New"
         },
         {
           "consignment_ref": "10289",
@@ -93,7 +106,7 @@
       "consignments": [
         {
           "consignment_ref": "1195695",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "10285",
           "customer": "Fred & Rosemary",
           "postcode": "DD8 1UN",
