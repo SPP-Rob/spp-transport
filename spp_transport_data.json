@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-26T15:57:39.935083",
+  "generated": "2026-05-27T08:51:25.071398",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -9,17 +9,17 @@
       "origin": "Landmark Joinery",
       "consignments": [
         {
-          "consignment_ref": "10204",
-          "order_ref": "10204",
-          "customer": "Trovex",
-          "town": "DEREHAM",
-          "postcode": "NR19 1JG",
-          "service": "Premium",
-          "pallets": "2",
-          "due_date": "12/05/2026 17:00",
+          "consignment_ref": "Floortble",
+          "order_ref": "Floortble",
+          "customer": "Special Bar Services",
+          "town": "PERSHORE",
+          "postcode": "WR10 2DD",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "27/05/2026 12:00",
           "eta": "",
           "planned": "No",
-          "status": "Delivered"
+          "status": "Departed hub"
         },
         {
           "consignment_ref": "10143",
@@ -33,19 +33,6 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "Floortble",
-          "order_ref": "Floortble",
-          "customer": "Special Bar Services",
-          "town": "PERSHORE",
-          "postcode": "WR10 2DD",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "27/05/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Collection Depot"
         },
         {
           "consignment_ref": "10289",
@@ -117,33 +104,33 @@
         },
         {
           "consignment_ref": "1193228",
-          "status": "At Collection Depot",
+          "status": "At Delivery Depot",
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
-          "due_date": "Wednesday",
+          "due_date": "Today",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "940kg"
         },
         {
           "consignment_ref": "1192774",
-          "status": "At Collection Depot",
+          "status": "At Delivery Depot",
           "order_ref": "10171",
           "customer": "Hutton And Read Ltd",
           "postcode": "EH27 8EA",
-          "due_date": "Wednesday",
+          "due_date": "Today",
           "service": "24 AM SV PU",
           "pallets": "1OS3",
           "weight": "810kg"
         },
         {
           "consignment_ref": "1191275",
-          "status": "Collected",
+          "status": "At Hub",
           "order_ref": "10233",
           "customer": "Esl Fuels Ltd",
           "postcode": "PL9 9XH",
-          "due_date": "Wednesday",
+          "due_date": "Today",
           "service": "24",
           "pallets": "1OS2",
           "weight": "622kg"
