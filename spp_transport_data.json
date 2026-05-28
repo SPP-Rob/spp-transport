@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-27T15:57:23.255660",
+  "generated": "2026-05-28T08:51:46.453654",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -17,7 +17,7 @@
           "service": "Premium AM",
           "pallets": "1",
           "due_date": "27/05/2026 12:00",
-          "eta": "11:25 - 13:25",
+          "eta": "",
           "planned": "No",
           "status": "Delivered"
         },
@@ -106,11 +106,11 @@
       "consignments": [
         {
           "consignment_ref": "1195695",
-          "status": "At Collection Depot",
+          "status": "At Delivery Depot",
           "order_ref": "10285",
           "customer": "Fred & Rosemary",
           "postcode": "DD8 1UN",
-          "due_date": "Thursday",
+          "due_date": "Today",
           "service": "24 SV PU",
           "pallets": "1OS2",
           "weight": "595kg"
@@ -121,7 +121,7 @@
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
-          "due_date": "Today",
+          "due_date": "Last Wednesday",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "940kg"
@@ -139,11 +139,11 @@
         },
         {
           "consignment_ref": "1191275",
-          "status": "At Hub",
+          "status": "To Delivery Depot",
           "order_ref": "10233",
           "customer": "Esl Fuels Ltd",
           "postcode": "PL9 9XH",
-          "due_date": "Today",
+          "due_date": "Last Wednesday",
           "service": "24",
           "pallets": "1OS2",
           "weight": "622kg"
@@ -279,17 +279,6 @@
           "service": "24 SV BD PU",
           "pallets": "1OS2",
           "weight": "46kg"
-        },
-        {
-          "consignment_ref": "1133104",
-          "status": "Delivered",
-          "order_ref": "10119",
-          "customer": "Roda Uk Ltd",
-          "postcode": "LE67 9TW",
-          "due_date": "Delivered",
-          "service": "24",
-          "pallets": "1OS2",
-          "weight": "190kg"
         }
       ]
     }
