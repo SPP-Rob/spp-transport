@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-28T12:01:47.598700",
+  "generated": "2026-05-28T15:57:38.181108",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -44,7 +44,7 @@
           "pallets": "1",
           "due_date": "01/06/2026 17:00",
           "eta": "",
-          "planned": "No",
+          "planned": "Yes",
           "status": "New"
         },
         {
@@ -105,8 +105,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
-          "consignment_ref": "1200886",
+          "consignment_ref": "1202542",
           "status": "Acknowledged",
+          "order_ref": "10248",
+          "customer": "Graham Smith",
+          "postcode": "E10 7FB",
+          "due_date": "Tuesday",
+          "service": "24",
+          "pallets": "1OS2",
+          "weight": "225kg"
+        },
+        {
+          "consignment_ref": "1200886",
+          "status": "At Collection Depot",
           "order_ref": "10297",
           "customer": "Bibbi Bespoke Ltd",
           "postcode": "E14 7DF",
@@ -150,11 +161,11 @@
         },
         {
           "consignment_ref": "1191275",
-          "status": "Out for Delivery",
+          "status": "Arrived",
           "order_ref": "10233",
           "customer": "Esl Fuels Ltd",
           "postcode": "PL9 9XH",
-          "due_date": "Last Wednesday",
+          "due_date": "Delivered",
           "service": "24",
           "pallets": "1OS2",
           "weight": "622kg"
