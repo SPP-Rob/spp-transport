@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T10:32:19.598052",
+  "generated": "2026-05-29T12:01:49.632127",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -130,11 +130,11 @@
         },
         {
           "consignment_ref": "1200886",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10297",
           "customer": "Bibbi Bespoke Ltd",
           "postcode": "E14 7DF",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 AM PU",
           "pallets": "1OS2",
           "weight": "460kg"
@@ -152,7 +152,7 @@
         },
         {
           "consignment_ref": "1193228",
-          "status": "Arrived",
+          "status": "Delivered",
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
