@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T08:51:41.457011",
+  "generated": "2026-05-29T10:32:19.598052",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -141,11 +141,11 @@
         },
         {
           "consignment_ref": "1195695",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10285",
           "customer": "Fred & Rosemary",
           "postcode": "DD8 1UN",
-          "due_date": "Last Thursday",
+          "due_date": "Delivered",
           "service": "24 SV PU",
           "pallets": "1OS2",
           "weight": "595kg"
@@ -156,7 +156,7 @@
           "order_ref": "10229",
           "customer": "Alloy Project Solutions Ltd.",
           "postcode": "NW1 9PP",
-          "due_date": "Last Wednesday",
+          "due_date": "Delivered",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "940kg"
