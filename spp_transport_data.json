@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-01T12:01:33.484322",
+  "generated": "2026-06-01T15:57:20.165387",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -18,7 +18,7 @@
           "pallets": "1",
           "due_date": "01/06/2026 17:00",
           "eta": "",
-          "planned": "No",
+          "planned": "Yes",
           "status": "In Hub"
         },
         {
@@ -48,6 +48,19 @@
           "status": "Delivered"
         },
         {
+          "consignment_ref": "880",
+          "order_ref": "10384",
+          "customer": "T A Bartlett Pallets",
+          "town": "LIVERPOOL",
+          "postcode": "L24 9HX",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "02/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Collection Depot"
+        },
+        {
           "consignment_ref": "10258",
           "order_ref": "10258",
           "customer": "Guardian Exhibitions",
@@ -59,19 +72,6 @@
           "eta": "",
           "planned": "No",
           "status": "New"
-        },
-        {
-          "consignment_ref": "880",
-          "order_ref": "10384",
-          "customer": "T A Bartlett Pallets",
-          "town": "LIVERPOOL",
-          "postcode": "L24 9HX",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "02/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Out for collection"
         },
         {
           "consignment_ref": "10289",
@@ -132,7 +132,7 @@
       "consignments": [
         {
           "consignment_ref": "1205753",
-          "status": "Acknowledged",
+          "status": "At Delivery Depot",
           "order_ref": "1191275rr",
           "customer": "Esl Fuels Ltd",
           "postcode": "PL9 9XH",
@@ -143,7 +143,7 @@
         },
         {
           "consignment_ref": "1204927",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "10286 / 10395",
           "customer": "J Carney Construction Ltd",
           "postcode": "TA18 7YA",
@@ -154,7 +154,7 @@
         },
         {
           "consignment_ref": "1202542",
-          "status": "Collecting",
+          "status": "At Collection Depot",
           "order_ref": "10248",
           "customer": "Graham Smith",
           "postcode": "E10 7FB",
