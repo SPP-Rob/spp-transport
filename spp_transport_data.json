@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-01T10:32:01.229546",
+  "generated": "2026-06-01T12:01:33.484322",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -48,6 +48,19 @@
           "status": "Delivered"
         },
         {
+          "consignment_ref": "10258",
+          "order_ref": "10258",
+          "customer": "Guardian Exhibitions",
+          "town": "LEIGH ON SEA",
+          "postcode": "SS9 5PR",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "02/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "New"
+        },
+        {
           "consignment_ref": "880",
           "order_ref": "10384",
           "customer": "T A Bartlett Pallets",
@@ -71,7 +84,7 @@
           "due_date": "02/06/2026 12:00",
           "eta": "",
           "planned": "No",
-          "status": "New"
+          "status": "In Hub"
         }
       ]
     },
@@ -168,7 +181,7 @@
           "customer": "Fred & Rosemary",
           "postcode": "DD8 1UN",
           "due_date": "Delivered",
-          "service": "24 SV PU",
+          "service": "24 SV PU RP RD",
           "pallets": "1OS2",
           "weight": "595kg"
         },
