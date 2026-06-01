@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-29T15:57:38.932788",
+  "generated": "2026-06-01T10:32:01.229546",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -8,6 +8,19 @@
       "phone": "01942 887000",
       "origin": "Landmark Joinery",
       "consignments": [
+        {
+          "consignment_ref": "10301",
+          "order_ref": "10301",
+          "customer": "Johnston Joiners Ltd.",
+          "town": "PAISLEY",
+          "postcode": "PA3 4DY",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "01/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "In Hub"
+        },
         {
           "consignment_ref": "10143",
           "order_ref": "10143",
@@ -45,20 +58,7 @@
           "due_date": "02/06/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Collection Scheduled"
-        },
-        {
-          "consignment_ref": "10301",
-          "order_ref": "10301",
-          "customer": "Johnston Joiners Ltd.",
-          "town": "PAISLEY",
-          "postcode": "PA3 4DY",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "01/06/2026 17:00",
-          "eta": "",
-          "planned": "Yes",
-          "status": "New"
+          "status": "Out for collection"
         },
         {
           "consignment_ref": "10289",
@@ -96,19 +96,6 @@
           "status": "Delivered"
         },
         {
-          "consignment_ref": "10203",
-          "order_ref": "10203",
-          "customer": "PERMAQUIP MANUFACTURING LTD",
-          "town": "NORTH YORKSHIRE",
-          "postcode": "HG4 3JB",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "30/04/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
           "consignment_ref": "10252",
           "order_ref": "10252",
           "customer": "GW FABRICATIONS",
@@ -119,7 +106,7 @@
           "due_date": "03/06/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "New"
+          "status": "Collected"
         }
       ]
     },
@@ -131,8 +118,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
-          "consignment_ref": "1204927",
+          "consignment_ref": "1205753",
           "status": "Acknowledged",
+          "order_ref": "1191275rr",
+          "customer": "Esl Fuels Ltd",
+          "postcode": "PL9 9XH",
+          "due_date": "Tuesday",
+          "service": "24",
+          "pallets": "1OS2",
+          "weight": "622kg"
+        },
+        {
+          "consignment_ref": "1204927",
+          "status": "Collecting",
           "order_ref": "10286 / 10395",
           "customer": "J Carney Construction Ltd",
           "postcode": "TA18 7YA",
@@ -143,7 +141,7 @@
         },
         {
           "consignment_ref": "1202542",
-          "status": "Acknowledged",
+          "status": "Collecting",
           "order_ref": "10248",
           "customer": "Graham Smith",
           "postcode": "E10 7FB",
@@ -327,17 +325,6 @@
           "service": "24",
           "pallets": "1OS2",
           "weight": "989kg"
-        },
-        {
-          "consignment_ref": "1147961",
-          "status": "Delivered",
-          "order_ref": "10210",
-          "customer": "University College London",
-          "postcode": "E20 2AE",
-          "due_date": "Delivered",
-          "service": "24 SV BD PU",
-          "pallets": "1OS2",
-          "weight": "46kg"
         }
       ]
     }
