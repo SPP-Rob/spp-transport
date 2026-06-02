@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-02T12:01:32.820625",
+  "generated": "2026-06-02T15:57:25.890942",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -31,7 +31,7 @@
           "pallets": "1",
           "due_date": "02/06/2026 17:00",
           "eta": "",
-          "planned": "Yes",
+          "planned": "No",
           "status": "Departed hub"
         },
         {
@@ -57,7 +57,7 @@
           "pallets": "1",
           "due_date": "01/06/2026 17:00",
           "eta": "",
-          "planned": "No",
+          "planned": "Yes",
           "status": "In Hub"
         },
         {
@@ -96,8 +96,8 @@
           "pallets": "1",
           "due_date": "03/06/2026 12:00",
           "eta": "",
-          "planned": "No",
-          "status": "New"
+          "planned": "Yes",
+          "status": "Collection Depot"
         }
       ]
     },
@@ -145,7 +145,7 @@
           "due_date": "03/06/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Out for collection"
+          "status": "Collection Depot"
         }
       ]
     },
@@ -157,8 +157,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
-          "consignment_ref": "1209689",
+          "consignment_ref": "1210248",
           "status": "Acknowledged",
+          "order_ref": "10164",
+          "customer": "London & North Western Railway Heritage Co. Ltd",
+          "postcode": "CW2 6GT",
+          "due_date": "Thursday",
+          "service": "24",
+          "pallets": "1OS2",
+          "weight": "65kg"
+        },
+        {
+          "consignment_ref": "1209689",
+          "status": "Collected",
           "order_ref": "881",
           "customer": "Landmark",
           "postcode": "L24 9HX",
@@ -191,11 +202,11 @@
         },
         {
           "consignment_ref": "1202542",
-          "status": "At Delivery Depot",
+          "status": "Delivered",
           "order_ref": "10248",
           "customer": "Graham Smith",
           "postcode": "E10 7FB",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24",
           "pallets": "1OS2",
           "weight": "225kg"
