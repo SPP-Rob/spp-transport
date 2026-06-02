@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-02T10:32:03.199770",
+  "generated": "2026-06-02T12:01:32.820625",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -157,6 +157,17 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1209689",
+          "status": "Acknowledged",
+          "order_ref": "881",
+          "customer": "Landmark",
+          "postcode": "L24 9HX",
+          "due_date": "Wednesday",
+          "service": "24",
+          "pallets": "3OS2",
+          "weight": "4869kg"
+        },
+        {
           "consignment_ref": "1205753",
           "status": "Out for Delivery",
           "order_ref": "1191275rr",
@@ -169,11 +180,11 @@
         },
         {
           "consignment_ref": "1204927",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10286 / 10395",
           "customer": "J Carney Construction Ltd",
           "postcode": "TA18 7YA",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24 AM PU",
           "pallets": "1OS2",
           "weight": "250kg"
