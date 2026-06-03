@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-02T15:57:25.890942",
+  "generated": "2026-06-03T10:31:45.947493",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -8,6 +8,19 @@
       "phone": "01942 887000",
       "origin": "Landmark Joinery",
       "consignments": [
+        {
+          "consignment_ref": "10299",
+          "order_ref": "10299",
+          "customer": "Gateway Construction Services Ltd.",
+          "town": "TILBURY",
+          "postcode": "RM18 7HH",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "03/06/2026 12:00",
+          "eta": "09:14 - 11:05",
+          "planned": "No",
+          "status": "Out for delivery"
+        },
         {
           "consignment_ref": "880",
           "order_ref": "10384",
@@ -32,7 +45,7 @@
           "due_date": "02/06/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Departed hub"
+          "status": "Out for delivery"
         },
         {
           "consignment_ref": "10289",
@@ -43,7 +56,7 @@
           "service": "Premium AM",
           "pallets": "1",
           "due_date": "02/06/2026 12:00",
-          "eta": "09:11 - 11:11",
+          "eta": "",
           "planned": "No",
           "status": "Delivered"
         },
@@ -57,21 +70,8 @@
           "pallets": "1",
           "due_date": "01/06/2026 17:00",
           "eta": "",
-          "planned": "Yes",
-          "status": "In Hub"
-        },
-        {
-          "consignment_ref": "10143",
-          "order_ref": "10143",
-          "customer": "LUCY ELECTRIC UK LTD",
-          "town": "THAME",
-          "postcode": "OX9 3UJ",
-          "service": "Premium",
-          "pallets": "6",
-          "due_date": "19/05/2026 17:00",
-          "eta": "",
           "planned": "No",
-          "status": "Delivered"
+          "status": "Out for delivery"
         },
         {
           "consignment_ref": "Floortble",
@@ -85,19 +85,6 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10299",
-          "order_ref": "10299",
-          "customer": "Gateway Construction Services Ltd.",
-          "town": "TILBURY",
-          "postcode": "RM18 7HH",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "03/06/2026 12:00",
-          "eta": "",
-          "planned": "Yes",
-          "status": "Collection Depot"
         }
       ]
     },
@@ -108,19 +95,6 @@
       "phone": "0845 262 9995",
       "origin": "Booker Timber",
       "consignments": [
-        {
-          "consignment_ref": "10186",
-          "order_ref": "10186",
-          "customer": "L.A.C. CONVEYOR SYSTEMS LTD",
-          "town": "NOTTINGHAM",
-          "postcode": "NG6 8RE",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "13/05/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
         {
           "consignment_ref": "10252",
           "order_ref": "10252",
@@ -145,7 +119,20 @@
           "due_date": "03/06/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Collection Depot"
+          "status": "Out for delivery"
+        },
+        {
+          "consignment_ref": "10186",
+          "order_ref": "10186",
+          "customer": "L.A.C. CONVEYOR SYSTEMS LTD",
+          "town": "NOTTINGHAM",
+          "postcode": "NG6 8RE",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "13/05/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
         }
       ]
     },
@@ -158,7 +145,7 @@
       "consignments": [
         {
           "consignment_ref": "1210248",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10164",
           "customer": "London & North Western Railway Heritage Co. Ltd",
           "postcode": "CW2 6GT",
@@ -169,22 +156,22 @@
         },
         {
           "consignment_ref": "1209689",
-          "status": "Collected",
+          "status": "Delivered",
           "order_ref": "881",
           "customer": "Landmark",
           "postcode": "L24 9HX",
-          "due_date": "Wednesday",
+          "due_date": "Delivered",
           "service": "24",
           "pallets": "3OS2",
           "weight": "4869kg"
         },
         {
           "consignment_ref": "1205753",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "1191275rr",
           "customer": "Esl Fuels Ltd",
           "postcode": "PL9 9XH",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24",
           "pallets": "1OS2",
           "weight": "622kg"
