@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-03T12:01:17.915738",
+  "generated": "2026-06-03T15:57:06.405842",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -22,19 +22,6 @@
           "status": "Delivered"
         },
         {
-          "consignment_ref": "10258",
-          "order_ref": "10258",
-          "customer": "Guardian Exhibitions",
-          "town": "LEIGH ON SEA",
-          "postcode": "SS9 5PR",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "02/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Aborted"
-        },
-        {
           "consignment_ref": "880",
           "order_ref": "10384",
           "customer": "T A Bartlett Pallets",
@@ -46,6 +33,19 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10258",
+          "order_ref": "10258",
+          "customer": "Guardian Exhibitions",
+          "town": "LEIGH ON SEA",
+          "postcode": "SS9 5PR",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "02/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Out for delivery"
         },
         {
           "consignment_ref": "10289",
@@ -132,7 +132,7 @@
           "due_date": "03/06/2026 17:00",
           "eta": "",
           "planned": "No",
-          "status": "Out for delivery"
+          "status": "Delivered"
         },
         {
           "consignment_ref": "10186",
@@ -158,7 +158,7 @@
       "consignments": [
         {
           "consignment_ref": "1210248",
-          "status": "Collected",
+          "status": "At Collection Depot",
           "order_ref": "10164",
           "customer": "London & North Western Railway Heritage Co. Ltd",
           "postcode": "CW2 6GT",
