@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-04T12:01:33.773570",
+  "generated": "2026-06-04T15:57:20.901678",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -18,8 +18,8 @@
           "pallets": "2",
           "due_date": "04/06/2026 17:00",
           "eta": "",
-          "planned": "Yes",
-          "status": "Delivery Depot"
+          "planned": "No",
+          "status": "Out for delivery"
         },
         {
           "consignment_ref": "10299",
