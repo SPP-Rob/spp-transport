@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-04T15:57:20.901678",
+  "generated": "2026-06-05T08:51:44.097607",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -18,21 +18,8 @@
           "pallets": "2",
           "due_date": "04/06/2026 17:00",
           "eta": "",
-          "planned": "No",
-          "status": "Out for delivery"
-        },
-        {
-          "consignment_ref": "10299",
-          "order_ref": "10299",
-          "customer": "Gateway Construction Services Ltd.",
-          "town": "TILBURY",
-          "postcode": "RM18 7HH",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "03/06/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
+          "planned": "Yes",
+          "status": "Aborted"
         },
         {
           "consignment_ref": "880",
@@ -98,6 +85,19 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10299",
+          "order_ref": "10299",
+          "customer": "Gateway Construction Services Ltd.",
+          "town": "TILBURY",
+          "postcode": "RM18 7HH",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "03/06/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
         }
       ]
     },
@@ -158,11 +158,11 @@
       "consignments": [
         {
           "consignment_ref": "1210248",
-          "status": "Out for Delivery",
+          "status": "Delivered",
           "order_ref": "10164",
           "customer": "London & North Western Railway Heritage Co. Ltd",
           "postcode": "CW2 6GT",
-          "due_date": "Today",
+          "due_date": "Delivered",
           "service": "24",
           "pallets": "1OS2",
           "weight": "65kg"
@@ -364,28 +364,6 @@
           "service": "24 AM SV",
           "pallets": "1OS2",
           "weight": "270kg"
-        },
-        {
-          "consignment_ref": "1154013",
-          "status": "Delivered",
-          "order_ref": "10148/3501",
-          "customer": "Van Board Ltd.",
-          "postcode": "CH5 1QJ",
-          "due_date": "Delivered",
-          "service": "EC AM PU",
-          "pallets": "1OS2",
-          "weight": "375kg"
-        },
-        {
-          "consignment_ref": "1148717",
-          "status": "Delivered",
-          "order_ref": "10208",
-          "customer": "Hutton Construction Ltd",
-          "postcode": "IP17 1SP",
-          "due_date": "Delivered",
-          "service": "24",
-          "pallets": "1OS2",
-          "weight": "989kg"
         }
       ]
     }
