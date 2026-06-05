@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-05T08:51:44.097607",
+  "generated": "2026-06-05T10:32:18.820417",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -19,7 +19,7 @@
           "due_date": "04/06/2026 17:00",
           "eta": "",
           "planned": "Yes",
-          "status": "Aborted"
+          "status": "Loaded to C&D"
         },
         {
           "consignment_ref": "880",
@@ -146,6 +146,19 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10223",
+          "order_ref": "10223",
+          "customer": "Van King",
+          "town": "BACUP",
+          "postcode": "OL13 9QL",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "09/06/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "New"
         }
       ]
     },
