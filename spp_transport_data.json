@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-09T08:51:16.725642",
+  "generated": "2026-06-09T10:32:05.101582",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -15,7 +15,47 @@
       "account": "Account: SPEC01",
       "phone": "0845 262 9995",
       "origin": "Booker Timber",
-      "consignments": []
+      "consignments": [
+        {
+          "consignment_ref": "10252",
+          "order_ref": "10252",
+          "customer": "GW FABRICATIONS",
+          "town": "POWYS",
+          "postcode": "SY16 3LA",
+          "service": "Economy",
+          "pallets": "1",
+          "due_date": "03/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        },
+        {
+          "consignment_ref": "71630",
+          "order_ref": "71630",
+          "customer": "Bauer Media Outdoor Technic",
+          "town": "LANCASHIRE",
+          "postcode": "BL5 1FH",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "03/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10186",
+          "order_ref": "10186",
+          "customer": "L.A.C. CONVEYOR SYSTEMS LTD",
+          "town": "NOTTINGHAM",
+          "postcode": "NG6 8RE",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "13/05/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        }
+      ]
     },
     {
       "type": "Longs of Leeds",
