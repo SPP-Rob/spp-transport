@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-11T10:32:17.808312",
+  "generated": "2026-06-11T12:01:48.068415",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -87,6 +87,19 @@
           "status": "Delivered"
         },
         {
+          "consignment_ref": "885",
+          "order_ref": "855",
+          "customer": "WJ Timber Treatments",
+          "town": "LIVERPOOL",
+          "postcode": "L24 9HX",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "12/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Collected"
+        },
+        {
           "consignment_ref": "10332",
           "order_ref": "10332",
           "customer": "Inspire Events & Productions",
@@ -98,19 +111,6 @@
           "eta": "",
           "planned": "Yes",
           "status": "New"
-        },
-        {
-          "consignment_ref": "885",
-          "order_ref": "855",
-          "customer": "WJ Timber Treatments",
-          "town": "LIVERPOOL",
-          "postcode": "L24 9HX",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "12/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Out for collection"
         }
       ]
     },
