@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-11T12:01:48.068415",
+  "generated": "2026-06-11T15:57:37.529408",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -107,7 +107,7 @@
           "postcode": "SK6 2BH",
           "service": "Premium",
           "pallets": "1",
-          "due_date": "12/06/2026 17:00",
+          "due_date": "16/06/2026 17:00",
           "eta": "",
           "planned": "Yes",
           "status": "New"
