@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-11T15:57:37.529408",
+  "generated": "2026-06-12T08:51:26.945990",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -8,6 +8,19 @@
       "phone": "01942 887000",
       "origin": "Landmark Joinery",
       "consignments": [
+        {
+          "consignment_ref": "885",
+          "order_ref": "855",
+          "customer": "WJ Timber Treatments",
+          "town": "LIVERPOOL",
+          "postcode": "L24 9HX",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "12/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Loaded to C&D"
+        },
         {
           "consignment_ref": "880",
           "order_ref": "10384",
@@ -87,19 +100,6 @@
           "status": "Delivered"
         },
         {
-          "consignment_ref": "885",
-          "order_ref": "855",
-          "customer": "WJ Timber Treatments",
-          "town": "LIVERPOOL",
-          "postcode": "L24 9HX",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "12/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Collected"
-        },
-        {
           "consignment_ref": "10332",
           "order_ref": "10332",
           "customer": "Inspire Events & Productions",
@@ -109,7 +109,7 @@
           "pallets": "1",
           "due_date": "16/06/2026 17:00",
           "eta": "",
-          "planned": "Yes",
+          "planned": "No",
           "status": "New"
         }
       ]
