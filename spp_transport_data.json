@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T12:01:48.739330",
+  "generated": "2026-06-15T15:57:36.207282",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -110,7 +110,7 @@
           "due_date": "16/06/2026 17:00",
           "eta": "",
           "planned": "Yes",
-          "status": "New"
+          "status": "Collection Depot"
         }
       ]
     },
