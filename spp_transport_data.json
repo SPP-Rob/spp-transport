@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16T12:01:31.685782",
+  "generated": "2026-06-16T15:57:23.990070",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -107,7 +107,7 @@
           "postcode": "CT15 7JG",
           "service": "Economy",
           "pallets": "1",
-          "due_date": "19/06/2026 17:00",
+          "due_date": "24/06/2026 17:00",
           "eta": "",
           "planned": "No",
           "status": "New"
