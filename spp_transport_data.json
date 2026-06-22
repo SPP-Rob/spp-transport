@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19T15:57:27.564279",
+  "generated": "2026-06-22T08:51:26.866025",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -171,28 +171,6 @@
           "service": "24",
           "pallets": "1OS2",
           "weight": "622kg"
-        },
-        {
-          "consignment_ref": "1188210",
-          "status": "Delivered",
-          "order_ref": "10173",
-          "customer": "Monotypic Ltd",
-          "postcode": "TR26 2AN",
-          "due_date": "Delivered",
-          "service": "24 AM SV PU",
-          "pallets": "1OS2",
-          "weight": "363kg"
-        },
-        {
-          "consignment_ref": "1184571",
-          "status": "Delivered",
-          "order_ref": "10144",
-          "customer": "Spp",
-          "postcode": "SG14 1HD",
-          "due_date": "Delivered",
-          "service": "24 TL AM SV",
-          "pallets": "1M",
-          "weight": "92kg"
         }
       ]
     }
