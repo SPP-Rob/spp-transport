@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22T12:01:33.398124",
+  "generated": "2026-06-22T15:57:24.165608",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -52,8 +52,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
-          "consignment_ref": "1242098",
+          "consignment_ref": "1249941",
           "status": "Acknowledged",
+          "order_ref": "10310",
+          "customer": "Rolling Homes",
+          "postcode": "SY1 3LD",
+          "due_date": "Wednesday",
+          "service": "24 SV",
+          "pallets": "1OS2",
+          "weight": "440kg"
+        },
+        {
+          "consignment_ref": "1242098",
+          "status": "Collected",
           "order_ref": "10319",
           "customer": "Nancy Falloon",
           "postcode": "HP23 5SL",
