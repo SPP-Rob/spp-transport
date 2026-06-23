@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22T15:57:24.165608",
+  "generated": "2026-06-23T08:51:20.356672",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -15,34 +15,7 @@
       "account": "Account: SPEC01",
       "phone": "0845 262 9995",
       "origin": "Booker Timber",
-      "consignments": [
-        {
-          "consignment_ref": "10252",
-          "order_ref": "10252",
-          "customer": "GW FABRICATIONS",
-          "town": "POWYS",
-          "postcode": "SY16 3LA",
-          "service": "Economy",
-          "pallets": "1",
-          "due_date": "03/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
-          "consignment_ref": "71630",
-          "order_ref": "71630",
-          "customer": "Bauer Media Outdoor Technic",
-          "town": "LANCASHIRE",
-          "postcode": "BL5 1FH",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "03/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        }
-      ]
+      "consignments": []
     },
     {
       "type": "Longs of Leeds",
@@ -64,11 +37,11 @@
         },
         {
           "consignment_ref": "1242098",
-          "status": "Collected",
+          "status": "At Hub",
           "order_ref": "10319",
           "customer": "Nancy Falloon",
           "postcode": "HP23 5SL",
-          "due_date": "Tuesday",
+          "due_date": "Wednesday",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "765kg"
