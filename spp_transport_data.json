@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T12:01:23.865029",
+  "generated": "2026-06-23T15:57:12.167739",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -25,8 +25,19 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1252431",
+          "status": "Collecting",
+          "order_ref": "10381",
+          "customer": "Mcmullen Facades Ltd",
+          "postcode": "NG23 6NT",
+          "due_date": "Thursday",
+          "service": "24 AM",
+          "pallets": "1OS2",
+          "weight": "1230kg"
+        },
+        {
           "consignment_ref": "1251260",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10327",
           "customer": "Trewithen",
           "postcode": "PE8 4BP",
@@ -37,7 +48,7 @@
         },
         {
           "consignment_ref": "1249941",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10310",
           "customer": "Rolling Homes",
           "postcode": "SY1 3LD",
