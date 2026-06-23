@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T08:51:20.356672",
+  "generated": "2026-06-23T10:31:51.035531",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -24,6 +24,17 @@
       "phone": "0113 264 0106",
       "origin": "Triesse / Latham's",
       "consignments": [
+        {
+          "consignment_ref": "1251260",
+          "status": "Acknowledged",
+          "order_ref": "10327",
+          "customer": "Trewithen",
+          "postcode": "PE8 4BP",
+          "due_date": "Thursday",
+          "service": "EC AM SV PU",
+          "pallets": "1OS2",
+          "weight": "265kg"
+        },
         {
           "consignment_ref": "1249941",
           "status": "Acknowledged",
