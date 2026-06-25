@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T15:57:12.167739",
+  "generated": "2026-06-25T10:32:04.718779",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -15,7 +15,47 @@
       "account": "Account: SPEC01",
       "phone": "0845 262 9995",
       "origin": "Booker Timber",
-      "consignments": []
+      "consignments": [
+        {
+          "consignment_ref": "10252",
+          "order_ref": "10252",
+          "customer": "GW FABRICATIONS",
+          "town": "POWYS",
+          "postcode": "SY16 3LA",
+          "service": "Economy",
+          "pallets": "1",
+          "due_date": "03/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        },
+        {
+          "consignment_ref": "71630",
+          "order_ref": "71630",
+          "customer": "Bauer Media Outdoor Technic",
+          "town": "LANCASHIRE",
+          "postcode": "BL5 1FH",
+          "service": "Premium",
+          "pallets": "1",
+          "due_date": "03/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10322",
+          "order_ref": "10322",
+          "customer": "EURO TOWERS LTD",
+          "town": "NORTHAMPTON",
+          "postcode": "NN3 8RG",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "26/06/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Out for collection"
+        }
+      ]
     },
     {
       "type": "Longs of Leeds",
@@ -26,44 +66,44 @@
       "consignments": [
         {
           "consignment_ref": "1252431",
-          "status": "Collecting",
+          "status": "At Delivery Depot",
           "order_ref": "10381",
           "customer": "Mcmullen Facades Ltd",
           "postcode": "NG23 6NT",
-          "due_date": "Thursday",
+          "due_date": "Friday",
           "service": "24 AM",
           "pallets": "1OS2",
           "weight": "1230kg"
         },
         {
           "consignment_ref": "1251260",
-          "status": "Collected",
+          "status": "Out for Delivery",
           "order_ref": "10327",
           "customer": "Trewithen",
           "postcode": "PE8 4BP",
-          "due_date": "Thursday",
+          "due_date": "Today",
           "service": "EC AM SV PU",
           "pallets": "1OS2",
           "weight": "265kg"
         },
         {
           "consignment_ref": "1249941",
-          "status": "Collected",
+          "status": "Delivered",
           "order_ref": "10310",
           "customer": "Rolling Homes",
           "postcode": "SY1 3LD",
-          "due_date": "Wednesday",
+          "due_date": "Delivered",
           "service": "24 SV",
           "pallets": "1OS2",
           "weight": "440kg"
         },
         {
           "consignment_ref": "1242098",
-          "status": "At Hub",
+          "status": "Delivered",
           "order_ref": "10319",
           "customer": "Nancy Falloon",
           "postcode": "HP23 5SL",
-          "due_date": "Wednesday",
+          "due_date": "Delivered",
           "service": "24 AM SV PU",
           "pallets": "1OS2",
           "weight": "765kg"
