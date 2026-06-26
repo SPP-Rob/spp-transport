@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25T15:57:36.090301",
+  "generated": "2026-06-26T08:52:39.605354",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -8,6 +8,19 @@
       "phone": "01942 887000",
       "origin": "Landmark Joinery",
       "consignments": [
+        {
+          "consignment_ref": "10280",
+          "order_ref": "10280",
+          "customer": "Daw Green",
+          "town": "DEWSBURY",
+          "postcode": "WF13 2LY",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "26/06/2026 12:00",
+          "eta": "",
+          "planned": "Yes",
+          "status": "Delivery Depot"
+        },
         {
           "consignment_ref": "10018",
           "order_ref": "10018",
@@ -59,19 +72,6 @@
           "eta": "",
           "planned": "No",
           "status": "New"
-        },
-        {
-          "consignment_ref": "10280",
-          "order_ref": "10280",
-          "customer": "Daw Green",
-          "town": "DEWSBURY",
-          "postcode": "WF13 2LY",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "26/06/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Collection Depot"
         }
       ]
     },
@@ -82,6 +82,19 @@
       "phone": "0845 262 9995",
       "origin": "Booker Timber",
       "consignments": [
+        {
+          "consignment_ref": "10322",
+          "order_ref": "10322",
+          "customer": "EURO TOWERS LTD",
+          "town": "NORTHAMPTON",
+          "postcode": "NN3 8RG",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "26/06/2026 12:00",
+          "eta": "09:28 - 11:28",
+          "planned": "No",
+          "status": "Out for delivery"
+        },
         {
           "consignment_ref": "10252",
           "order_ref": "10252",
@@ -107,19 +120,6 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10322",
-          "order_ref": "10322",
-          "customer": "EURO TOWERS LTD",
-          "town": "NORTHAMPTON",
-          "postcode": "NN3 8RG",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "26/06/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Collected"
         }
       ]
     },
@@ -132,11 +132,11 @@
       "consignments": [
         {
           "consignment_ref": "1252431",
-          "status": "At Delivery Depot",
+          "status": "Out for Delivery",
           "order_ref": "10381",
           "customer": "Mcmullen Facades Ltd",
           "postcode": "NG23 6NT",
-          "due_date": "Friday",
+          "due_date": "Today",
           "service": "24 AM",
           "pallets": "1OS2",
           "weight": "1230kg"
@@ -250,39 +250,6 @@
           "service": "24 SV PU RP RD",
           "pallets": "1OS2",
           "weight": "595kg"
-        },
-        {
-          "consignment_ref": "1193228",
-          "status": "Delivered",
-          "order_ref": "10229",
-          "customer": "Alloy Project Solutions Ltd.",
-          "postcode": "NW1 9PP",
-          "due_date": "Delivered",
-          "service": "24 AM SV PU",
-          "pallets": "1OS2",
-          "weight": "940kg"
-        },
-        {
-          "consignment_ref": "1192774",
-          "status": "Delivered",
-          "order_ref": "10171",
-          "customer": "Hutton And Read Ltd",
-          "postcode": "EH27 8EA",
-          "due_date": "Delivered",
-          "service": "24 AM SV PU",
-          "pallets": "1OS3",
-          "weight": "810kg"
-        },
-        {
-          "consignment_ref": "1191275",
-          "status": "Arrived",
-          "order_ref": "10233",
-          "customer": "Esl Fuels Ltd",
-          "postcode": "PL9 9XH",
-          "due_date": "Delivered",
-          "service": "24",
-          "pallets": "1OS2",
-          "weight": "622kg"
         }
       ]
     }
