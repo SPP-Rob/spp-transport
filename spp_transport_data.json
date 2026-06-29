@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T10:32:18.649340",
+  "generated": "2026-06-29T12:01:53.284062",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -117,6 +117,17 @@
       "phone": "0113 264 0106",
       "origin": "Triesse / Latham's",
       "consignments": [
+        {
+          "consignment_ref": "1262524",
+          "status": "Acknowledged",
+          "order_ref": "10341",
+          "customer": "James Stuart Associates",
+          "postcode": "OX15 5AH",
+          "due_date": "Thursday",
+          "service": "EC AM SV PU",
+          "pallets": "1OS2",
+          "weight": "160kg"
+        },
         {
           "consignment_ref": "1262427",
           "status": "Acknowledged",
