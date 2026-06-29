@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T15:57:02.974916",
+  "generated": "2026-06-29T10:32:18.649340",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -8,19 +8,6 @@
       "phone": "01942 887000",
       "origin": "Landmark Joinery",
       "consignments": [
-        {
-          "consignment_ref": "10280",
-          "order_ref": "10280",
-          "customer": "Daw Green",
-          "town": "DEWSBURY",
-          "postcode": "WF13 2LY",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "26/06/2026 12:00",
-          "eta": "10:15 - 11:29",
-          "planned": "No",
-          "status": "Delivered"
-        },
         {
           "consignment_ref": "10018",
           "order_ref": "10018",
@@ -35,19 +22,6 @@
           "status": "Delivered"
         },
         {
-          "consignment_ref": "885",
-          "order_ref": "855",
-          "customer": "WJ Timber Treatments",
-          "town": "LIVERPOOL",
-          "postcode": "L24 9HX",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "12/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
           "consignment_ref": "10332A",
           "order_ref": "10332A",
           "customer": "Inspire Events & Production",
@@ -56,6 +30,19 @@
           "service": "Premium",
           "pallets": "1",
           "due_date": "16/06/2026 17:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10280",
+          "order_ref": "10280",
+          "customer": "Daw Green",
+          "town": "DEWSBURY",
+          "postcode": "WF13 2LY",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "26/06/2026 12:00",
           "eta": "",
           "planned": "No",
           "status": "Delivered"
@@ -83,19 +70,6 @@
       "origin": "Booker Timber",
       "consignments": [
         {
-          "consignment_ref": "10322",
-          "order_ref": "10322",
-          "customer": "EURO TOWERS LTD",
-          "town": "NORTHAMPTON",
-          "postcode": "NN3 8RG",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "26/06/2026 12:00",
-          "eta": "09:28 - 11:28",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
           "consignment_ref": "10252",
           "order_ref": "10252",
           "customer": "GW FABRICATIONS",
@@ -120,6 +94,19 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
+        },
+        {
+          "consignment_ref": "10322",
+          "order_ref": "10322",
+          "customer": "EURO TOWERS LTD",
+          "town": "NORTHAMPTON",
+          "postcode": "NN3 8RG",
+          "service": "Premium AM",
+          "pallets": "1",
+          "due_date": "26/06/2026 12:00",
+          "eta": "",
+          "planned": "No",
+          "status": "Delivered"
         }
       ]
     },
@@ -131,13 +118,24 @@
       "origin": "Triesse / Latham's",
       "consignments": [
         {
+          "consignment_ref": "1262427",
+          "status": "Acknowledged",
+          "order_ref": "10340",
+          "customer": "Robinsons Preservation",
+          "postcode": "M50 2GL",
+          "due_date": "Wednesday",
+          "service": "24 BD",
+          "pallets": "1OS2",
+          "weight": "252kg"
+        },
+        {
           "consignment_ref": "1252431",
           "status": "Delivered",
           "order_ref": "10381",
           "customer": "Mcmullen Facades Ltd",
           "postcode": "NG23 6NT",
           "due_date": "Delivered",
-          "service": "24 AM",
+          "service": "48 AM",
           "pallets": "1OS2",
           "weight": "1230kg"
         },
@@ -148,7 +146,7 @@
           "customer": "Trewithen",
           "postcode": "PE8 4BP",
           "due_date": "Delivered",
-          "service": "EC AM SV PU",
+          "service": "EC AM SV PU RD",
           "pallets": "1OS2",
           "weight": "265kg"
         },
@@ -170,7 +168,7 @@
           "customer": "Nancy Falloon",
           "postcode": "HP23 5SL",
           "due_date": "Delivered",
-          "service": "24 AM SV PU",
+          "service": "48 AM SV PU RD",
           "pallets": "1OS2",
           "weight": "765kg"
         },
@@ -228,28 +226,6 @@
           "service": "24",
           "pallets": "1OS2",
           "weight": "225kg"
-        },
-        {
-          "consignment_ref": "1200886",
-          "status": "Delivered",
-          "order_ref": "10297",
-          "customer": "Bibbi Bespoke Ltd",
-          "postcode": "E14 7DF",
-          "due_date": "Delivered",
-          "service": "24 AM PU",
-          "pallets": "1OS2",
-          "weight": "460kg"
-        },
-        {
-          "consignment_ref": "1195695",
-          "status": "Delivered",
-          "order_ref": "10285",
-          "customer": "Fred & Rosemary",
-          "postcode": "DD8 1UN",
-          "due_date": "Delivered",
-          "service": "24 SV PU RP RD",
-          "pallets": "1OS2",
-          "weight": "595kg"
         }
       ]
     }
