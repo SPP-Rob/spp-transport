@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T12:01:47.411152",
+  "generated": "2026-06-30T15:57:36.415920",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -46,19 +46,6 @@
           "eta": "",
           "planned": "No",
           "status": "Delivered"
-        },
-        {
-          "consignment_ref": "891",
-          "order_ref": "TRS099",
-          "customer": "TRIESSE LTD",
-          "town": "LEEDS",
-          "postcode": "LS25 6EZ",
-          "service": "Economy",
-          "pallets": "1",
-          "due_date": "06/07/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "New"
         }
       ]
     },
@@ -119,7 +106,7 @@
       "consignments": [
         {
           "consignment_ref": "1262524",
-          "status": "Collected",
+          "status": "At Collection Depot",
           "order_ref": "10341",
           "customer": "James Stuart Associates",
           "postcode": "OX15 5AH",
@@ -130,7 +117,7 @@
         },
         {
           "consignment_ref": "1262427",
-          "status": "Collected",
+          "status": "At Collection Depot",
           "order_ref": "10340",
           "customer": "Robinsons Preservation",
           "postcode": "M50 2GL",
