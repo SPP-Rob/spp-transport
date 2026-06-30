@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T10:32:15.375465",
+  "generated": "2026-06-30T12:01:47.411152",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -119,7 +119,7 @@
       "consignments": [
         {
           "consignment_ref": "1262524",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10341",
           "customer": "James Stuart Associates",
           "postcode": "OX15 5AH",
@@ -130,7 +130,7 @@
         },
         {
           "consignment_ref": "1262427",
-          "status": "Acknowledged",
+          "status": "Collected",
           "order_ref": "10340",
           "customer": "Robinsons Preservation",
           "postcode": "M50 2GL",
