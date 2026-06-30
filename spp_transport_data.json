@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T08:51:41.588178",
+  "generated": "2026-06-30T10:32:15.375465",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -55,7 +55,7 @@
           "postcode": "LS25 6EZ",
           "service": "Economy",
           "pallets": "1",
-          "due_date": "02/07/2026 17:00",
+          "due_date": "06/07/2026 17:00",
           "eta": "",
           "planned": "No",
           "status": "New"
