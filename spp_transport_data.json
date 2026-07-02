@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T15:57:36.415920",
+  "generated": "2026-07-02T10:31:47.675194",
   "carriers": [
     {
       "type": "Pall-Ex",
@@ -9,6 +9,19 @@
       "origin": "Landmark Joinery",
       "consignments": [
         {
+          "consignment_ref": "10349",
+          "order_ref": "10349",
+          "customer": "CJS / Dental Excellence",
+          "town": "LONDON",
+          "postcode": "W12 7GF",
+          "service": "Premium Timed",
+          "pallets": "1",
+          "due_date": "02/07/2026 13:00",
+          "eta": "",
+          "planned": "Yes",
+          "status": "Delivery Depot"
+        },
+        {
           "consignment_ref": "10018",
           "order_ref": "10018",
           "customer": "Envirograf LTD",
@@ -17,19 +30,6 @@
           "service": "Economy",
           "pallets": "1",
           "due_date": "24/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10332A",
-          "order_ref": "10332A",
-          "customer": "Inspire Events & Production",
-          "town": "BREDBURY",
-          "postcode": "SK6 2BH",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "16/06/2026 17:00",
           "eta": "",
           "planned": "No",
           "status": "Delivered"
@@ -55,47 +55,7 @@
       "account": "Account: SPEC01",
       "phone": "0845 262 9995",
       "origin": "Booker Timber",
-      "consignments": [
-        {
-          "consignment_ref": "10252",
-          "order_ref": "10252",
-          "customer": "GW FABRICATIONS",
-          "town": "POWYS",
-          "postcode": "SY16 3LA",
-          "service": "Economy",
-          "pallets": "1",
-          "due_date": "03/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
-          "consignment_ref": "71630",
-          "order_ref": "71630",
-          "customer": "Bauer Media Outdoor Technic",
-          "town": "LANCASHIRE",
-          "postcode": "BL5 1FH",
-          "service": "Premium",
-          "pallets": "1",
-          "due_date": "03/06/2026 17:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        },
-        {
-          "consignment_ref": "10322",
-          "order_ref": "10322",
-          "customer": "EURO TOWERS LTD",
-          "town": "NORTHAMPTON",
-          "postcode": "NN3 8RG",
-          "service": "Premium AM",
-          "pallets": "1",
-          "due_date": "26/06/2026 12:00",
-          "eta": "",
-          "planned": "No",
-          "status": "Delivered"
-        }
-      ]
+      "consignments": []
     },
     {
       "type": "Longs of Leeds",
@@ -106,22 +66,22 @@
       "consignments": [
         {
           "consignment_ref": "1262524",
-          "status": "At Collection Depot",
+          "status": "Delivered",
           "order_ref": "10341",
           "customer": "James Stuart Associates",
           "postcode": "OX15 5AH",
-          "due_date": "Thursday",
+          "due_date": "Delivered",
           "service": "EC AM SV PU",
           "pallets": "1OS2",
           "weight": "160kg"
         },
         {
           "consignment_ref": "1262427",
-          "status": "At Collection Depot",
+          "status": "Delivered",
           "order_ref": "10340",
           "customer": "Robinsons Preservation",
           "postcode": "M50 2GL",
-          "due_date": "Wednesday",
+          "due_date": "Delivered",
           "service": "24 BD",
           "pallets": "1OS2",
           "weight": "252kg"
@@ -191,39 +151,6 @@
           "service": "24",
           "pallets": "3OS2",
           "weight": "4869kg"
-        },
-        {
-          "consignment_ref": "1205753",
-          "status": "Delivered",
-          "order_ref": "1191275rr",
-          "customer": "Esl Fuels Ltd",
-          "postcode": "PL9 9XH",
-          "due_date": "Delivered",
-          "service": "24",
-          "pallets": "1OS2",
-          "weight": "622kg"
-        },
-        {
-          "consignment_ref": "1204927",
-          "status": "Delivered",
-          "order_ref": "10286 / 10395",
-          "customer": "J Carney Construction Ltd",
-          "postcode": "TA18 7YA",
-          "due_date": "Delivered",
-          "service": "24 AM PU",
-          "pallets": "1OS2",
-          "weight": "250kg"
-        },
-        {
-          "consignment_ref": "1202542",
-          "status": "Delivered",
-          "order_ref": "10248",
-          "customer": "Graham Smith",
-          "postcode": "E10 7FB",
-          "due_date": "Delivered",
-          "service": "24",
-          "pallets": "1OS2",
-          "weight": "225kg"
         }
       ]
     }
